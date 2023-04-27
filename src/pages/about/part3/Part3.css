@@ -1,0 +1,58 @@
+.part3Container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.part3Div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 64px;
+}
+
+@media only screen and (max-width: 64.375em) {
+    .part3Div {
+        flex-direction: column;
+    }
+}
+
+.part3TextDiv1 {
+    width: 45%;
+    height: fit-content;
+}
+
+.part3TextDiv2 {
+    margin-top: 320px;
+    width: 45%;
+    height: fit-content;
+}
+
+.part3text {
+    margin-top: 0px;
+    font-size: 18px;
+    font-family: "neue-light";
+    line-height: 27px;
+    padding-bottom: 24px;
+}
+
+@media only screen and (max-width: 64.375em) {
+    .part3TextDiv1 {
+        width: 100%;
+        padding-bottom: 40px;
+    }
+
+    .part3TextDiv2 {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .part3text {
+        padding-bottom: 16px;
+    }
+}
+
+.aboutimg1 {
+    width: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,42 @@
+.filterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 40px;
+    background-color: #F9F4F1;
+    border-radius: 120px;
+}
+
+.filterDiv {
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cancelDiv {
+    border-radius: 120px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(231, 224, 224, 0.5);
+    margin-right: 10px;
+}
+
+.cancelIcon {
+    padding: 1.51px;
+    cursor: pointer;
+}
+
+.filterHeader {
+    margin: 0px;
+    margin-right: 5px;
+    font-size: 16px;
+    font-family: "neue-light";
+}
+
+.filterText {
+    margin: 0px;
+    font-size: 16px;
+    font-family: "neue-medium";
+}

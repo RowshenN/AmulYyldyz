@@ -1,0 +1,20 @@
+@font-face {
+    font-family: neue-light;
+    /* 300 */
+    src: url("./fonts/NeueHaasUnica-Light.ttf");
+}
+@font-face {
+    font-family: neue-regular;
+    /* 400 */
+    src: url("./fonts/NeueHaasUnica-Regular.ttf");
+}
+@font-face {
+    font-family: neue-medium; 
+    /* 500 */
+    src: url("./fonts/NeueHaasUnica-Medium.ttf");
+}
+@font-face {
+    font-family: pts;
+    /* 400 */
+    src: url("./fonts/PTSerif-Regular.ttf");
+}

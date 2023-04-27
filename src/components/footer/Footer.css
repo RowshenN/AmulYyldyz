@@ -1,0 +1,128 @@
+.footerDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #DDD7D2;
+    padding-top: 32px;
+    margin-bottom: 32px;
+}
+
+.footerNavDIv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 528px;
+    padding-top: 15px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #DDD7D2;
+}
+
+
+@media only screen and (max-width: 56.25em) {
+    .footerNavDIv {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .footerNavDIv {
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 28.125em) {
+    .footerNavDIv {
+        flex-direction: column;
+    }
+}
+
+.footerLogoDiv {
+    width: 170px;
+}
+
+.footerlogo {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footerNavItem {
+    color: #161616;
+    font-family: "neue-light";
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footerNavItem:hover {
+    font-family: "neue-medium";
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footerNavItem {
+        font-size: 14px;
+    }
+}
+
+.active {
+    font-family: "neue-medium";
+}
+
+.footerText {
+    font-size: 18px;
+    font-family: "pts";
+    padding-bottom: 16px;
+    font-weight: 400;
+}
+
+.footerInput {
+    width: 528px;
+    height: 56px;
+    border-radius: 120px;
+    border: none;
+    border: 1px solid #DDD7D2;
+    font-size: 16px;
+    color: #161616;
+    font-family: 'neue-light';
+    cursor: pointer;
+    outline: none;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .footerInput {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .footerInput {
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 26.875em) {
+    .footerInput {
+        width: 300px;
+    }
+}
+
+.footerInput:placeholder-shown {
+    font-size: 16px;
+    font-family: "neue-light";
+    color: #8D8D8D;
+}
+
+.footerButton {
+    width: 100px;
+    height: 40px;
+    background-color: #EBFAFF;
+    border-radius: 120px;
+    border: none;
+    margin-left: -110px;
+    cursor: pointer;
+}
+
+.footerButtontext {
+    font-size: 16px;
+    font-family: "neue-medium";
+}

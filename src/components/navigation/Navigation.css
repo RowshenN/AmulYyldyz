@@ -1,0 +1,204 @@
+.navigationDiv {
+    height: 103px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 50em) {
+    .navigationDiv {
+        height: 80px;
+        justify-content: space-between;
+    }
+}
+
+.navLogo {
+    width: 170px;
+}
+
+@media only screen and (max-width: 50em) {
+    .navLogo {
+        padding-right: 20px;
+    }
+}
+
+.navImg {
+    width: 100%;
+    object-fit: contain;
+}
+
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 56px;
+    padding: 0;
+}
+
+@media only screen and (max-width: 68.75em) {
+    .navList {
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .navList {
+        display: none;
+    }
+}
+
+.NavItem {
+    font-family: 'neue-light';
+    font-weight: 300;
+    list-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #161616;
+}
+
+.NavItem:hover {
+    font-family: "neue-medium";
+}
+
+@media only screen and (max-width: 56.25em) {
+    .NavItem {
+        font-size: 16px;
+    }
+
+    .navLogo {
+        width: 123px;
+    }
+}
+
+.active {
+    font-family: "neue-medium";
+}
+
+.languageDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    position: relative;
+}
+
+@media only screen and (max-width: 50em) {
+    .languageDiv {
+        padding: 0px 13px;
+        height: 30px;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .narrowdown {
+        padding-right: 13px;
+        border-right: 1px solid #DDD7D2;
+    }
+}
+
+@media only screen and (max-width: 25em) {
+    .languageDiv {
+        padding-left: 13px;
+        border-left: 1px solid #DDD7D2;
+    }
+}
+
+.narrowdown {
+    cursor: pointer;
+}
+
+.languageDiv:hover .langTextDiv{
+    display: block;
+}
+
+.langTextDiv {
+    position: absolute;
+    padding: 0 20px;
+    top: 25px;
+    right: 10px;
+    display: none;
+}
+
+.engText {
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 300;
+    font-family: 'neue-light';
+    color: #161616;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .engText {
+        font-size: 14px;
+    }
+}
+
+.navDiv {
+   display: none;
+}
+
+@media only screen and (max-width: 50em) {
+    .navDiv {
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: all .3s;
+        padding-left: 20px;
+    }
+}
+
+.navDiv:hover .navIcon::before {
+    top: -11.5px;
+}
+
+.navDiv:hover .navIcon::after {
+    top: 11.5px;
+}
+
+.navDiv2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.navIcon {
+    width: 25px;
+    height: 1.5px;
+    background-color: #161616;
+}
+
+.navIcon, .navIcon::before, .navIcon::after {
+    width: 25px;
+    height: 0.5px;
+    background-color: #333;
+    display: inline-block;
+}
+
+.navIcon::before, .navIcon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* border: 1px solid #161616; */
+}
+
+.navIcon::before {
+    top: -10px;
+}
+
+.navIcon::after {
+    top: 10px;
+}
+
+.language {
+    display: none;
+}

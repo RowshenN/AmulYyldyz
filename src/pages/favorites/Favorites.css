@@ -1,0 +1,25 @@
+.favoritesContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.favoritesCardDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.navigasiyaDiv {
+    padding-bottom: 17px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.navigasiya {
+    font-size: 18px;
+    font-family: "neue-light";
+    line-height: 27px;
+    cursor: pointer;
+}

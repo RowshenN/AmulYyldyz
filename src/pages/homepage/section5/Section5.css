@@ -1,0 +1,127 @@
+.section5Container {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    background-color: #EBFAFF;
+}
+
+.section5div {
+    padding: 56px 0px;
+    height: fit-content;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 50em) {
+    .section5div {
+        flex-wrap: wrap;
+    }
+}
+
+.section5TextDiv {
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: fit-content;
+    border-left: 1px solid #DDD7D2;
+    padding-left: 130px;
+}
+
+@media only screen and (max-width: 84.375em) {
+    .section5TextDiv {
+        padding-left: 90px;
+    }
+}
+
+@media only screen and (max-width: 75em) {
+    .section5TextDiv {
+        padding-left: 50px;
+    }
+}
+
+@media only screen and (max-width: 50em) {
+    .section5TextDiv {
+        border-left: none;
+        width: 100%;
+        padding-bottom: 24px;
+        align-items: center;
+        padding-left: 0px;
+    }
+}
+
+.section5h3 {
+    font-size: 28px;
+    font-family: "pts";
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: -8px;
+    color: #161616;
+}
+
+.section5text {
+    font-family: "neue-light";
+    font-size: 18px;
+    line-height: 150%;
+    color: #161616;
+    margin-top: -15px;
+}
+
+.section5button {
+    width: 209px;
+    height: 59px;
+    background-color: #fff;
+    border-radius: 120px;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    margin-top: 17px;
+}
+
+.section5button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, .3);
+}
+
+.section5button:active {
+    transform: translateY(2px);
+}
+
+.section5butontext {
+    font-family: "neue-light";
+    font-size: 18px;
+    color: #161616;
+}
+
+.section5ImgDiv {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+@media only screen and (max-width: 50em) {
+    .section5ImgDiv {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.section5Img {
+    width: 85%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 50em) {
+    .section5Img {
+        width: 75%;
+        object-fit: contain;
+    }
+}

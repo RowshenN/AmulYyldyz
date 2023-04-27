@@ -1,0 +1,13 @@
+.imgCarouselDiv {
+    width: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 64px;
+    margin-top: -35px;
+}
+
+.imgDiv {
+    display: flex;
+    gap: 40px;
+}

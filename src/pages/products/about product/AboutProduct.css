@@ -1,0 +1,125 @@
+.aboutproductContainer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.aboutproductDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 64px;
+ 
+} 
+
+.aboutImagesDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 45%;
+}
+
+.bigImg {
+    width: 100%;
+    object-fit: contain;
+}
+
+.smallImageDiv {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.smallimg {
+    width: 22%;
+    object-fit: contain;
+}
+
+.aboutInformationDiv {
+    width: 53%;
+    margin-top: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.aboutHeader {
+    color: #161616;
+    font-size: 28px;
+    font-weight: 400;
+    font-family: "pts";
+    line-height: 36px;
+    padding-bottom: 30px;
+    margin: 0px;
+}
+
+.infoDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 24px;
+}
+
+.infodiv1 {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 16px;
+}
+
+.infoTextDiv {
+    padding-bottom: 35px;
+}
+
+.infoText {
+    font-family: "neue-light";
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.infoText0 {
+    padding-bottom: 35px;
+}
+
+.infoText1 {
+    margin: 0px;
+}
+
+.infoText2 {
+    padding-top: 20px;
+}
+
+.infoText3 {
+    margin: 0px;
+}
+
+.infoButonDiv {
+    position: relative;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    left: 26px;
+    z-index: 10;
+}
+
+.infobuton {
+    width: 219px;
+    height: 48px;
+    border-radius: 120px;
+    border: none;
+    background-color: #EBFAFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.infobutonText {
+    font-size: 18px;
+    font-family: "neue-medium";
+    line-height: 18px;
+    padding-left: 40px;
+    color: #161616;
+}

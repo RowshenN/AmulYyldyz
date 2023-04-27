@@ -1,0 +1,48 @@
+.section1Container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.aboutHeaderDIv {
+    margin-top: 20px;
+    margin-bottom: 64px;
+    height: fit-content;
+    width: 65%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
+}
+
+.aboutHeaderText {
+    font-family: "pts";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 46.8px;
+    color: #161616;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .aboutHeaderText {
+        font-size: 28px;
+    }
+
+    .aboutHeaderDIv{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 45.625em) {
+    .aboutHeaderText {
+        font-size: 24px;
+    }
+}
+
+.part1Highlited {
+    background-color: #EBFAFF;
+}
+
+.aboutHeaderText2 {
+    margin-bottom: 0px;
+}
