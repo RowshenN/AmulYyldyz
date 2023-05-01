@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import './AboutProduct.css'
@@ -8,15 +8,17 @@ import big from '../../../images/big.png'
 import small from '../../../images/small.png'
 import FilterInfo from './filterInfo/FilterInfo'
 import heart from '../../../images/simple-heart.svg'
+import { Context } from '../../../context/Context'
 
 const AboutProduct = (props) => {
+  const {dil} = useContext(Context)
   const navigate = useNavigate();
   return (
     <div>
         <Navigation />
 
         <div className="navigasiyaDiv">
-         <h2 className='navigasiya'><span onClick={() =>navigate("/homepage")}>Homepage</span> / <span onClick={() =>navigate("/products")}>Products</span> / Product page</h2>
+         <h2 className='navigasiya'><span onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Домашняя страница" :"Homepage"}</span> / <span onClick={() =>navigate("/products")}>{dil === "RU" ? "Продукты" : "Products"}</span> / Product page</h2>
         </div>
 
         <div className="aboutproductContainer">
@@ -34,19 +36,19 @@ const AboutProduct = (props) => {
 
                 <div className="aboutInformationDiv">
                   <h1 className="aboutHeader">
-                    Ethereal Nights: The Ultimate Collection of Luxurious
-                     and Breathable 100% Turkmen Cotton Bedsheets
+                    {dil === "RU" ? "Эфирные ночи: полная коллекция роскошных и дышащих простыней из 100% туркменского хлопка" 
+                    : "Ethereal Nights: The Ultimate Collection of Luxurious and Breathable 100% Turkmen Cotton Bedsheets"}
                   </h1>
 
                   <div className="infoDiv">
                     <div className="infodiv1">
-                      <FilterInfo name="Category:" text="Bedsheets" />
-                      <FilterInfo name="Product code:" text="RT 24142" />
+                      <FilterInfo name={dil === "RU" ? "Категория:" :"Category:"} text={dil === "RU" ? "Простыни" : "Bedsheets"} />
+                      <FilterInfo name={dil === "RU" ? "Код продукта:" : "Product code:"} text="RT 24142" />
                     </div>
 
                     <div className="infodiv1">
-                      <FilterInfo name="Material:" text="Cotton" />
-                      <FilterInfo name="Color:" text="Brown" />
+                      <FilterInfo name={dil === "RU" ? "Материал:" : "Material:"} text={dil === "RU" ? "Хлопок" : "Cotton"} />
+                      <FilterInfo name={dil === "Ru" ? "Цвет:" : "Color:"} text={dil === "RU" ? "Коричневый" : "Brown"} />
                     </div>
                   </div>
 
@@ -64,7 +66,7 @@ const AboutProduct = (props) => {
 
                   <div className="infoButonDiv">
                     <img src={heart} alt="heart" className="heart-icon" />
-                    <button className="infobuton"><span className="infobutonText">Add to favourites</span></button>
+                    <button className="infobuton"><span className="infobutonText">{dil === "RU" ? "Добавить в избранное" : "Add to favourites"}</span></button>
                   </div>
 
                 </div>

@@ -10,9 +10,9 @@ const Card = (props) => {
   return ( 
       <div onClick={()=>navigate("/products/1")} className="cardContainer">
         <div className="cardImage">
-          <img src={props.surat} alt="image" />
+          <img src={props.surat} alt="surat" />
           <div className="iconDiv">
-           <img src={props.heart === "false" ? empty : red} alt=""  className='cardIcon'/>
+           <img src={props.heart === "false" ? empty : red} alt="surat"  className='cardIcon'/>
           </div>
         </div>
         <p className="cardName">{props.name}</p>

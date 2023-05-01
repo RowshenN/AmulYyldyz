@@ -1,39 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import './Section2.css'
+import { Context } from '../../../context/Context'
 
 const Section2 = () => {
-  return (
-    <div>
-      <div className="section2Div" >
+  const {dil} = useContext(Context)
+  return ( 
+      <div className="section2Div"  >
         <div className="section2Container">
 
-          <div className="section2HeaderDiv">
-              <h1 className='section2HeaderText'>Amul Yyldyzy is a leading manufacturer and exporter of premium towels and bedsheets, based in Turkmenistan. </h1>
+          <div className="section2HeaderDiv" 
+            data-aos="fade-down" 
+            data-aos-delay="300"
+            data-aos-ease="ease"
+          >
+            <h1 className='section2HeaderText'>{dil === "RU" ? "«Амуль Йылдызы» — ведущий производитель и экспортер полотенец и простыней премиум-класса в Туркменистане." : "Amul Yyldyzy is a leading manufacturer and exporter of premium towels and bedsheets, based in Turkmenistan."}</h1>
           </div>
 
-          <div className="section2TextContainer">
-                <div className="textDiv1">
-                    <h2 className='section2H2'>01</h2>
-                    <h3 className='section2H3'>Quality:</h3>
-                    <p className='section2P'>High-quality towels & bedsheets made with expert craftsmanship.</p>
+          <div className="section2TextContainer" >
+                <div className="textDiv1" data-aos="fade-up" data-aos-ease="ease">
+                  <h2 className='section2H2' >01</h2>
+                  <h3 className='section2H3'>{dil === "RU" ? "Качество:" : "Quality:"}</h3>
+                  <p className='section2P'>{dil === "RU" ? "Высококачественные полотенца и простыни, изготовленные с профессиональным мастерством." : "High-quality towels & bedsheets made with expert craftsmanship."}</p>
                 </div>
 
-                <div className="textDiv2">
+                <div className="textDiv2" data-aos="zoom-out" data-aos-ease="ease">
                     <h2 className='section2H2'>02</h2>
-                    <h3 className='section2H3'>Sustainability:</h3>
-                    <p className='section2P'>Eco-friendly practices and responsible sourcing of materials.</p>
+                    <h3 className='section2H3'>{dil === "RU" ? "Устойчивость:" : "Sustainability:"}</h3>
+                    <p className='section2P'>{dil === "RU" ? "Экологичность и ответственный подход к выбору материалов." : "Eco-friendly practices and responsible sourcing of materials."}</p>
                 </div>
                 
-                <div className="textDiv3">
+                <div className="textDiv3" data-aos="fade-down" data-aos-ease="ease">
                     <h2 className='section2H2'>03</h2>
-                    <h3 className='section2H3'>Customer satisfaction:</h3>
-                    <p className='section2P'>Exceptional service and fast, reliable shipping worldwide.</p>
+                    <h3 className='section2H3'>{dil === "RU" ? "Удовлетворенность клиентов:" : "Customer satisfaction:"}</h3>
+                    <p className='section2P'>{dil === "RU" ? "Исключительный сервис и быстрая и надежная доставка по всему миру." : "Exceptional service and fast, reliable shipping worldwide."}</p>
                 </div>
           </div>
         </div>
       </div>
-    </div>
   )
 }
 

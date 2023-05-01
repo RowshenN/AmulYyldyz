@@ -13,7 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 528px;
+    width: fit-content;
+    gap: 20px;
     padding-top: 15px;
     padding-bottom: 28px;
     border-bottom: 1px solid #DDD7D2;
@@ -22,18 +23,13 @@
 
 @media only screen and (max-width: 56.25em) {
     .footerNavDIv {
-        width: 400px;
+        width: fit-content;
     }
 }
 
-@media only screen and (max-width: 31.25em) {
+@media only screen and (max-width: 34.375em) {
     .footerNavDIv {
-        width: 340px;
-    }
-}
-
-@media only screen and (max-width: 28.125em) {
-    .footerNavDIv {
+        gap: 20px;
         flex-direction: column;
     }
 }

@@ -9,14 +9,25 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 64px;
- 
 } 
+
+@media only screen and (max-width: 62.5em) {
+    .aboutproductDiv {
+        flex-direction: column;
+    }
+}
 
 .aboutImagesDiv {
     display: flex;
     flex-direction: column;
     gap: 16px;
     width: 45%;
+}
+
+@media only screen and (max-width: 62.5em) {
+    .aboutImagesDiv {
+        width: 100%;
+    }
 }
 
 .bigImg {
@@ -44,6 +55,14 @@
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 62.5em) {
+    .aboutInformationDiv {
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
 .aboutHeader {
     color: #161616;
     font-size: 28px;
@@ -54,17 +73,43 @@
     margin: 0px;
 }
 
+@media only screen and (max-width: 45.625em) {
+    .aboutHeader {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .aboutHeader {
+        font-size: 18px;
+        font-family: "neue-medium";
+    }
+}
+
 .infoDiv {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding-bottom: 24px;
+    align-items: center;
+    justify-content: center;
 }
 
 .infodiv1 {
     flex-wrap: wrap;
     display: flex;
     gap: 16px;
+}
+
+@media only screen and (max-width: 62.5em) {
+    .aboutHeader {
+        padding-top: 20px;
+    }
+
+    .infodiv1 {
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .infoTextDiv {
@@ -74,11 +119,12 @@
 .infoText {
     font-family: "neue-light";
     font-size: 18px;
-    line-height: 27px;
+    
 }
 
 .infoText0 {
     padding-bottom: 35px;
+    margin: 0px;
 }
 
 .infoText1 {
@@ -102,6 +148,31 @@
     top: 15px;
     left: 26px;
     z-index: 10;
+}
+
+@media only screen and (max-width: 90.625em) {
+    .aboutHeader {
+        padding-bottom: 15px;
+    }
+
+    .infoDiv {
+        padding-bottom: 5px;
+    }
+
+    .infoTextDiv {
+        padding-bottom: 5px;
+    }
+
+    .infoText0 {
+        padding-bottom: 0px;
+        margin: 0px;
+    }
+
+    .infoText2 {
+        padding: 0px;
+        margin: 0px;
+    }
+
 }
 
 .infobuton {

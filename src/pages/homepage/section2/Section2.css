@@ -60,7 +60,7 @@
 .section2TextContainer {
     width: 70%;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
@@ -127,7 +127,6 @@
     font-family: "neue-medium";
     margin-top: 0px;
     color: #161616;
-    white-space: nowrap;
 }
 
 .section2P {

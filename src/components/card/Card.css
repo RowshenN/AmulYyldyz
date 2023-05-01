@@ -6,6 +6,7 @@
     width: 282px;
     height: fit-content;
     margin: 25px;
+    cursor: pointer;
 }
 
 .cardImage {
@@ -33,5 +34,5 @@
 .cardName {
     font-family: "neue-light";
     margin: 0px;
-    margin-top: 16px;
+    margin-top: 10px;
 }

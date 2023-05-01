@@ -18,3 +18,11 @@
     /* 400 */
     src: url("./fonts/PTSerif-Regular.ttf");
 }
+
+body {
+    overflow-x: hidden !important;
+}
+
+html {
+    overflow-x: hidden !important;
+}

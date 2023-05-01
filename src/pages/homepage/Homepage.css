@@ -2,32 +2,26 @@
     width: 90%;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    overflow-x: hidden;
     justify-content: center;
 }
 
 .homeHeader {
     margin-top: 40px;
     margin-bottom: 60px;
-    width: 509px;
+    width: 50%;
     text-align: center;
 }
 
 @media only screen and (max-width: 64.375em) {
     .homeHeader {
-        width: 440px;
+        width: 60%;
     }
 }
 
 @media only screen and (max-width: 55.625em) {
     .homeHeader {
-        width: 328px;
-    }
-}
-
-@media only screen and (max-width: 45.625em) {
-    .homeHeader {
-        width: 300px;
+        width: 60%;
     }
 }
 
