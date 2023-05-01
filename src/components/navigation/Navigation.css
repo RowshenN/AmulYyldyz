@@ -166,12 +166,12 @@
     }
 }
 
-.BurgeButton {
+.BurgerButton {
    display: none;
 }
 
 @media only screen and (max-width: 60.625em) {
-    .BurgeButton {
+    .BurgerButton {
         cursor: pointer;
         height: 24px;
         width: 24px;
@@ -184,15 +184,15 @@
     }
 }
 
-.BurgeButton:hover .navIcon::before {
+.BurgerButton:hover .navIcon::before {
     top: -11.5px;
 }
 
-.BurgeButton:hover .navIcon::after {
+.BurgerButton:hover .navIcon::after {
     top: 11.5px;
 }
 
-.BurgeButton2 {
+.BurgerButton2 {
     display: flex;
     flex-direction: column;
     position: relative;

@@ -64,15 +64,15 @@ const Navigation = (props) => {
           </div>
         </div>
         
-        {props?.close ?<div onClick={()=>props?.closeDrawerHandler()} className="BurgeButton">
-            <div className="BurgeButton2" >
+        {props?.close ?<div onClick={()=>props?.closeDrawerHandler()} className="BurgerButton">
+            <div className="BurgerButton2" >
            
            <span>X</span>
          
           </div>
         </div>:
-        <div onClick={()=>setOpen(true)} className="BurgeButton">
-          <div className="BurgeButton2" >
+        <div onClick={()=>setOpen(true)} className="BurgerButton">
+          <div className="BurgerButton2" >
             <span className="navIcon"></span>
           </div>
         </div>
