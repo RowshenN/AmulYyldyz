@@ -24,6 +24,8 @@ const AboutProduct = (props) => {
          <h2 className='navigasiya' data-aos="fade-down"><span onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Главная" :"Homepage"}</span> / <span onClick={() =>navigate("/products")}>{dil === "RU" ? "Продукты" : "Products"}</span> / Product page</h2>
         </div>
 
+        
+
         <div className="aboutproductContainer">
             <div className="aboutproductDiv">
 
