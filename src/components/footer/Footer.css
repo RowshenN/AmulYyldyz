@@ -103,6 +103,12 @@
     }
 }
 
+@media only screen and (max-width: 23.125em) {
+    .footerInput {
+        width: 250px;
+    }
+}
+
 .footerInput:placeholder-shown {
     font-size: 16px;
     font-family: "neue-light";
@@ -110,16 +116,24 @@
 }
 
 .footerButton {
-    width: 100px;
+    width: 110px;
     height: 40px;
     background-color: #EBFAFF;
     border-radius: 120px;
     border: none;
-    margin-left: -110px;
+    margin-left: -120px;
     cursor: pointer;
+    padding: 0px 8px;
 }
 
 .footerButtontext {
-    font-size: 16px;
-    font-family: "neue-medium";
+    font-weight: 500;
+    font-size: 18px;
+    font-family: 'neue-medium';
+}
+
+@media only screen and (max-width: 31.25em) {
+    .footerButtontext {
+        font-size: 16px;
+    }
 }

@@ -5,6 +5,8 @@
 
 .drawer_container {
     background-color: #fff;
+    padding: 10px;
+    min-height: 100vh;
 }
 
 .filter_container {

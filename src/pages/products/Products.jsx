@@ -55,7 +55,7 @@ const Products = (props) => {
         <Drawer
           placement="right"
           closable={false}
-          onClose={()=>setOpen(false)}
+          onClose={()=>setOpen2(false)}
           open={open2}
           key={"placement"}
         >

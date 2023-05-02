@@ -6,7 +6,7 @@ import trash from '../../../images/trash.svg'
 const DrawerHeader = (props) => {
   return (
         <div className="drawerHeader_div">
-            <img src={props.icon} alt="icon" className='drawerheader_icon' onClick={() => props.close} />
+            <img src={props.icon} alt="icon" className='drawerheader_icon' onClick={() => props.close()} />
             <h2 className='drawerheader_header'>{props.header}</h2>
             <img src={trash} alt="trash" className='drawerheader_icon' />
         </div>

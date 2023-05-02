@@ -20,7 +20,7 @@ const Favorites = () => {
       <Navigation />
 
       <div className="navigasiyaDiv" data-aos="fade-right">
-       <h2 className='navigasiya'><span onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Домашняя страница" : "Homepage"}</span> / <span onClick={() =>navigate("/favourites")}>Favourites</span></h2>
+       <h2 className='navigasiya'><span onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Главная" : "Homepage"}</span> / <span onClick={() =>navigate("/favourites")}>{dil === "RU" ? "Избранное" : "Favourites"}</span></h2>
       </div>
 
       <div className="pagename_div" data-aos="fade-left">

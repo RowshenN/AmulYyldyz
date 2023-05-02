@@ -28,11 +28,11 @@ const Footer = () => {
 
         <p className='footerText'>{dil === "RU" ? "Подпишитесь на нашу рассылку" : "Subscribe for our newsletter"}</p>
 
-        <div className="footerFormDiv" style={{position:"relative"}}>
+        <div className="footerFormDiv" style={{position: "relative"}}>
           <form action="">
             <img src={mail} alt="mail" style={{position:"absolute",left:"2%",top:"30%", cursor:"pointer"}} />
-            <input type="text" placeholder={dil === "RU" ? "Адрес электронной почты" : "Email address"} className='footerInput' style={{paddingLeft:"50px",fontSize:"18px"}} />
-            <button className='footerButton'><span className='footerButtontext'></span>{dil === "RU" ? "Представлять на рассмотрение" : "Submit"}</button>
+            <input type="text" placeholder={dil === "RU" ? "Э-почта" : "Email address"} className='footerInput' style={{paddingLeft:"50px",fontSize:"18px"}} />
+            <button className='footerButton'><span className='footerButtontext'>{dil === "RU" ? "Отправить" : "Submit"}</span></button>
           </form>
         </div>
       </div>
