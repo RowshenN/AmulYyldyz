@@ -1,4 +1,4 @@
-.filterContainer {
+.Filtertext_container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,14 +8,14 @@
     border-radius: 120px;
 }
 
-.filterDiv {
+.filtertext_div {
     padding: 0px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.cancelDiv {
+.filtertext_cancel {
     border-radius: 120px;
     display: flex;
     align-items: center;
@@ -23,19 +23,19 @@
     margin-right: 10px;
 }
 
-.cancelIcon {
+.filtertext_cancelicon {
     padding: 1.51px;
     cursor: pointer;
 }
 
-.filterHeader {
+.filtertext_header {
     margin: 0px;
     margin-right: 8px;
     font-size: 16px;
     font-family: "neue-light";
 }
 
-.filterText {
+.filterText_text {
     margin: 0px;
     font-size: 18px;
     color: #161616;

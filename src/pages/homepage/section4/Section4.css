@@ -94,6 +94,7 @@
     font-weight: 400;
     font-size: 42px;
     color: #161616;
+    white-space: nowrap;
 }
 
 .section4p {

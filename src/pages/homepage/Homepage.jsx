@@ -26,7 +26,10 @@ const Homepage = (props) => {
       <Navigation />
       <div className="homeHeaderDiv" data-aos="fade-down" data-aos-ease = 'ease'>
         <div className="homeHeader">
-          <h1 className='homeHeaderText'>{dil==="RU"?"Поднимите свой повседневный уровень на новый уровень с нашими естественными элегантными полотенцами и простынями":"Elevate Your Everyday with Our Naturally Elegant Towels and Bedsheets"}</h1>
+          <h1 className='homeHeaderText'>
+            {dil==="RU"?"Поднимите свой повседневный уровень на новый уровень с нашими естественными элегантными полотенцами и простынями"
+            :"Elevate Your Everyday with Our Naturally Elegant Towels and Bedsheets"}
+          </h1>
         </div>
       </div>
       <div className="homeimgDiv">

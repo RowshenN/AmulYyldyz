@@ -14,19 +14,19 @@ const Footer = () => {
   return (
     <div>
       <div className="footerDiv">
-        <div className="footerLogoDiv" data-aos="zoom-out">
+        <div className="footerLogoDiv">
           <img src={logo} alt="logo" className='footerlogo' />
         </div>
 
         <div className="footerNavDIv">
-         <p className={pathN.pathname==="/homepage" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/homepage")} data-aos="fade-down">{dil === "RU" ? "Домашняя страница" : "Homepage"}</p>
-         <p className={pathN.pathname==="/products" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/products")} data-aos="fade-up">{dil === "RU" ? "Продукты" :"Products"}</p>
-         <p className={pathN.pathname==="/favourites" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/favourites")} data-aos="fade-down">{dil === "RU" ? "Избранное" : "Favourites"}</p>
-         <p className={pathN.pathname==="/contact" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/contact")} data-aos="fade-up">{dil === "RU" ? "Связаться с нами" : "Contact us"}</p>
-         <p className={pathN.pathname==="/about" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/about")} data-aos="zoom-out-right">{dil === "RU" ? "О нас" :"About us"}</p>
+         <p className={pathN.pathname==="/homepage" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Главная" : "Homepage"}</p>
+         <p className={pathN.pathname==="/products" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/products")}>{dil === "RU" ? "Продукты" :"Products"}</p>
+         <p className={pathN.pathname==="/favourites" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/favourites")}>{dil === "RU" ? "Избранное" : "Favourites"}</p>
+         <p className={pathN.pathname==="/contact" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/contact")}>{dil === "RU" ? "Связаться с нами" : "Contact us"}</p>
+         <p className={pathN.pathname==="/about" ? "active footerNavItem":" footerNavItem "} onClick={() =>navigate("/about")}>{dil === "RU" ? "О нас" :"About us"}</p>
         </div>
 
-        <p className='footerText' data-aos="zoom-in-up">{dil === "RU" ? "Подпишитесь на нашу рассылку" : "Subscribe for our newsletter"}</p>
+        <p className='footerText'>{dil === "RU" ? "Подпишитесь на нашу рассылку" : "Subscribe for our newsletter"}</p>
 
         <div className="footerFormDiv" style={{position:"relative"}}>
           <form action="">

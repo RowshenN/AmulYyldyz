@@ -1,7 +1,15 @@
 .ant-drawer-body{
     padding-top: 0px !important;
-    background-color: #DDD7D2 !important;
+    background-color: #F9F4F1 !important;
+    height: 700px !important;
 }
+
+.drawerContainer {
+    border-top: 1px solid #DDD7D2;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .navigationDiv {
     height: 103px;
     width: 90%;

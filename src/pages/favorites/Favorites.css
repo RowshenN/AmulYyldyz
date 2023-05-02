@@ -10,8 +10,17 @@
     flex-wrap: wrap;
 }
 
+.pagename_div {
+    width: 100%;
+}
+
 .navigasiyaDiv {
     padding-bottom: 16px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pagename_div {
     width: 90%;
     margin: 0 auto;
 }
@@ -19,6 +28,7 @@
 .navigasiya {
     font-size: 18px;
     font-family: "neue-light";
+    font-weight: 300;
     line-height: 27px;
     cursor: pointer;
     margin-bottom: 0px;

@@ -1,0 +1,26 @@
+.draweritem_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #DDD7D2;
+    padding-bottom: 8px;
+}
+
+.Draweritem_header {
+    font-weight: 400;
+    font-family: "pts";
+    font-size: 18px;
+    line-height: 23.4px;
+}
+
+.draweritem_div2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.Draweritem_text {
+    font-size: 16px;
+    font-family: "neue-regular";
+}

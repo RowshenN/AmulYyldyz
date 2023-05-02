@@ -5,17 +5,15 @@ import cancel from '../../../images/cancel.svg'
 
 const FilterText = (props) => {
   return (
-    <div>
-      <div className="filterContainer">
-        <div className="filterDiv">
-          <div className="cancelDiv">
-            <img src={cancel} alt="cancel" className='cancelIcon' />
+      <div className="Filtertext_container">
+        <div className="filtertext_div" data-aos="flip-right">
+          <div className="filtertext_cancel">
+            <img src={cancel} alt="cancel" className='filtertext_cancelicon' />
           </div>
-          <p className='filterHeader'>{props.header}:</p>
-          <h2 className='filterText'>{props.text}</h2>
+          <p className='filtertext_header'>{props.header}:</p>
+          <h2 className='filterText_text'>{props.text}</h2>
         </div>
       </div>
-    </div>
   )
 }
 

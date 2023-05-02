@@ -3,12 +3,61 @@
     margin: 0 auto;
 }
 
+.drawer_container {
+    background-color: #fff;
+}
+
+.filter_container {
+    display: none;
+}
+
+@media only screen and (max-width: 50em) {
+    .filter_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+}
+
+.drawer_items {
+    border-bottom: 1px solid #DDD7D2;
+}
+
+.filter_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    width: fit-content;
+    min-width: 340px;
+    height: 47px;
+    border: none;
+    border-radius: 4px;
+    background-color: #EBFAFF;
+    cursor: pointer;
+}
+
+.filter_button_text {
+    font-size: 18px;
+    font-family: "neue-medium";
+    line-height: 27px;
+}
+
 .FilterContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
+}
+
+@media only screen and (max-width: 50em) {
+    .FilterContainer {
+        display: none;
+    }
 }
 
 .filterH1 {

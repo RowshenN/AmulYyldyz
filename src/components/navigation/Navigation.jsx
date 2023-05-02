@@ -5,17 +5,14 @@ import './Navigation.css'
 import logo from '../../images/nav-logo.svg'
 import lang from '../../images/language.png'
 import narrowdown from '../../images/nav-arrow-down.svg'
+import cancel from '../../images/cancel.svg'
+import Navitem from './burgerbutton-navItem/Navitem'
 import { Context } from '../../context/Context'
 import { Drawer } from 'antd'
 
 const Navigation = (props) => {
-  const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const [open,setOpen] = useState(false)
 
-  const openDrawerHandler = () => {
-    setDrawerIsOpen(true);
-  }; 
- 
   const closeDrawerHandler = () => {
     setOpen(false);
   };
@@ -25,7 +22,7 @@ const Navigation = (props) => {
     const {dil,ChangeDil} = useContext(Context);
     console.log(dil)
   return (
-      <div className="navigationDiv" data-aos="zoom-out">
+      <div className="navigationDiv" >
         <Drawer
          placement="top"
          closable={false}
@@ -36,6 +33,30 @@ const Navigation = (props) => {
          <div>
             <Navigation closeDrawerHandler={closeDrawerHandler} close={true}/>
             <div className='drawerContainer'>
+              <Navitem 
+                pagename = {dil==="RU" ? "Главная" : "Homepage"} 
+                pagePathname = "/homepage"
+              />
+              
+              <Navitem 
+                pagename = {dil==="RU" ? "Продукты" : "Products"} 
+                pagePathname = "/products"
+              />
+
+               <Navitem 
+                pagename = {dil==="RU" ? "Избранное" : "Favourites"} 
+                pagePathname = "/favourites"
+              />
+
+               <Navitem 
+                pagename = {dil==="RU" ? "Связаться с нами" : "Contact us"}
+                pagePathname = "/contact"
+              />
+
+               <Navitem 
+                pagename = {dil==="RU" ? "О нас" : "About us"}
+                pagePathname = "/about"
+              />
             </div>
         </div>
       </Drawer>
@@ -67,7 +88,7 @@ const Navigation = (props) => {
         {props?.close ?<div onClick={()=>props?.closeDrawerHandler()} className="BurgerButton">
             <div className="BurgerButton2" >
            
-           <span>X</span>
+           <span> <img src={cancel} alt="cancel" /> </span>
          
           </div>
         </div>:

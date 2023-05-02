@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import './AboutProduct.css'
 import Navigation from '../../../components/navigation/Navigation'
@@ -13,20 +15,21 @@ import { Context } from '../../../context/Context'
 const AboutProduct = (props) => {
   const {dil} = useContext(Context)
   const navigate = useNavigate();
+  AOS.init({duration: 600, delay: 100})
   return (
     <div>
         <Navigation />
 
         <div className="navigasiyaDiv">
-         <h2 className='navigasiya'><span onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Домашняя страница" :"Homepage"}</span> / <span onClick={() =>navigate("/products")}>{dil === "RU" ? "Продукты" : "Products"}</span> / Product page</h2>
+         <h2 className='navigasiya' data-aos="fade-down"><span onClick={() =>navigate("/homepage")}>{dil === "RU" ? "Главная" :"Homepage"}</span> / <span onClick={() =>navigate("/products")}>{dil === "RU" ? "Продукты" : "Products"}</span> / Product page</h2>
         </div>
 
         <div className="aboutproductContainer">
             <div className="aboutproductDiv">
 
                 <div className="aboutImagesDiv">
-                  <img src={big} alt="big" className='bigImg' />
-                  <div className="smallImageDiv">
+                  <img src={big} alt="big" className='bigImg' data-aos="fade-right" />
+                  <div className="smallImageDiv" data-aos="fade-up">
                    <img src={small} alt="small" className='smallimg' />
                    <img src={small} alt="small" className='smallimg' />
                    <img src={small} alt="small" className='smallimg' />
@@ -35,24 +38,24 @@ const AboutProduct = (props) => {
                 </div>
 
                 <div className="aboutInformationDiv">
-                  <h1 className="aboutHeader">
+                  <h1 className="aboutHeader" data-aos="fade-left">
                     {dil === "RU" ? "Эфирные ночи: полная коллекция роскошных и дышащих простыней из 100% туркменского хлопка" 
                     : "Ethereal Nights: The Ultimate Collection of Luxurious and Breathable 100% Turkmen Cotton Bedsheets"}
                   </h1>
 
                   <div className="infoDiv">
-                    <div className="infodiv1">
+                    <div className="infodiv1" data-aos="zoom-out-left">
                       <FilterInfo name={dil === "RU" ? "Категория:" :"Category:"} text={dil === "RU" ? "Простыни" : "Bedsheets"} />
                       <FilterInfo name={dil === "RU" ? "Код продукта:" : "Product code:"} text="RT 24142" />
                     </div>
 
-                    <div className="infodiv1">
+                    <div className="infodiv1" data-aos="zoom-out-right">
                       <FilterInfo name={dil === "RU" ? "Материал:" : "Material:"} text={dil === "RU" ? "Хлопок" : "Cotton"} />
                       <FilterInfo name={dil === "Ru" ? "Цвет:" : "Color:"} text={dil === "RU" ? "Коричневый" : "Brown"} />
                     </div>
                   </div>
 
-                  <div className="infoTextDiv">
+                  <div className="infoTextDiv" data-aos="fade-left">
                     <p className="infoText infoText0">Постельное белье 100% хлопок.</p>
                     <p className="infoText infoText1">Размеры на односпальное постельное белье: </p>
                     <p className="infoText infoText1">Наволочка: 50 x 70</p>
