@@ -20,7 +20,6 @@ const Navigation = (props) => {
     const navigate = useNavigate();  
     const pathN = useLocation(); 
     const {dil,ChangeDil} = useContext(Context);
-    console.log(dil)
   return (
       <div className="navigationDiv" >
         <Drawer
@@ -58,8 +57,9 @@ const Navigation = (props) => {
                 pagePathname = "/about"
               />
             </div>
-        </div>
+         </div>
       </Drawer>
+
         <div className="navLogo">
           <img src={logo} alt="logo" className='navImg' />
         </div>
@@ -71,33 +71,32 @@ const Navigation = (props) => {
            <li className={pathN.pathname==="/favourites"?" active NavItem":" NavItem "} onClick={() =>navigate("/favourites")}>{dil==="RU" ? "Избранное" : "Favourites"}</li>
            <li className={pathN.pathname==="/contact"?" active NavItem":" NavItem "} onClick={() =>navigate("/contact")}>{dil==="RU" ? "Связаться с нами" : "Contact us"}</li>
            <li className={pathN.pathname==="/about"?" active NavItem":" NavItem "} onClick={() =>navigate("/about")}>{dil==="RU" ? "О нас" : "About us"}</li>
-         </ul>
+          </ul>
         </div>
 
         <div className="languageChangeDiv">
-        <div className="languageDiv">
-          <img src={lang} alt="lang"  />
-          <span className="languageName">{dil=="RU"?"Русский":"English"}</span> 
-          <img src={narrowdown} alt="narrowdown" className='narrowdown' />
+          <div className="languageDiv">
+            <img src={lang} alt="lang"  />
+            <span className="languageName">{dil=="RU"?"Русский":"English"}</span> 
+            <img src={narrowdown} alt="narrowdown" className='narrowdown' />
 
-          <div className="langTextDiv">
-           <p onClick={()=>{dil === "RU" ? ChangeDil("EN") : ChangeDil("RU")}} className='languageName'>{dil === "RU" ? "English" : "Русский"}</p> 
+            <div className="langTextDiv">
+              <p onClick={()=>{dil === "RU" ? ChangeDil("EN") : ChangeDil("RU")}} className='languageName'>{dil === "RU" ? "English" : "Русский"}</p> 
+            </div>
           </div>
-        </div>
         
-        {props?.close ?<div onClick={()=>props?.closeDrawerHandler()} className="BurgerButton">
-            <div className="BurgerButton2" >
-           
-           <span> <img src={cancel} alt="cancel" /> </span>
-         
-          </div>
-        </div>:
-        <div onClick={()=>setOpen(true)} className="BurgerButton">
-          <div className="BurgerButton2" >
-            <span className="navIcon"></span>
-          </div>
-        </div>
-        }
+         {props?.close ?
+            <div onClick={()=>props?.closeDrawerHandler()} className="BurgerButton">
+              <div className="BurgerButton2" >
+               <span> <img src={cancel} alt="cancel" /> </span>
+              </div>
+            </div>:
+           <div onClick={()=>setOpen(true)} className="BurgerButton">
+             <div className="BurgerButton2" >
+               <span className="navIcon"></span>
+             </div>
+           </div>
+          }
         </div>
 
       </div>

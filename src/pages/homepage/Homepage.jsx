@@ -19,7 +19,7 @@ import img1 from '../../images/home-img1.png'
 const Homepage = (props) => {
   const {dil } = useContext(Context);
   console.log(dil)
-    AOS.init({duration: 600, delay: 100})
+    AOS.init({duration: 650, delay: 150})
 
   return (
     <div>

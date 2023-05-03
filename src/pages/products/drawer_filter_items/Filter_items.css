@@ -1,0 +1,8 @@
+.filter_items_div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    border-top: 1px solid #DDD7D2;
+    padding-top: 10px;
+}

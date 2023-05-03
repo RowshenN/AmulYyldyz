@@ -29,14 +29,30 @@ const Favorites = () => {
       <div className="favoritesContainer">
        
         <div className="favoritesCardDiv">
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
-          <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />               
+        <div className="product_Div" data-aos="fade-right">
+            <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div>
+          <div className="product_Div" data-aos="fade-right">
+            <Card surat="cardimg2.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="cardimg2.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-right">
+            <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-right">
+            <Card surat="cardimg2.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="carImg.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="cardimg2.png" heart="true" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div>               
         </div>
       </div>
 

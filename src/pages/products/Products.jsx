@@ -14,6 +14,7 @@ import icon from '../../images/filter-icon.svg'
 import { Drawer } from 'antd'
 import DrawerItem from './drawerItem/DrawerItem'
 import DrawerHeader from './DrawerHeader/DrawerHeader'
+import Filter_items from './drawer_filter_items/Filter_items'
 
 
 const Products = (props) => {
@@ -28,10 +29,14 @@ const Products = (props) => {
   const closeDrawer2Handler = () => {
     setOpen2(false);
   }
+  const openDrawer2Handler = () =>{
+    setOpen2(true)
+  };
   AOS.init({duration: 600, delay: 100}) 
 
   return (
     <div>
+      
        <Drawer
          placement="right"
          closable={false}
@@ -39,18 +44,21 @@ const Products = (props) => {
          open={open}
          key={"placement"}
         >
-          <div className="drawer_container" data-aos="fade-right">
+          <div className="drawer_container" data-aos="fade-up">
             <DrawerHeader header="Filter" icon="/left.svg" close={closeDrawerHandler} />
             <div className="drawer_items">
-              <DrawerItem header="Category:" />
-              <DrawerItem header="Width:" />
-              <DrawerItem header="Length:" text="0.04" />
-              <DrawerItem header="Material:" text="cotton" />
-              <DrawerItem header="Color:" text="beige" />
+              <DrawerItem header="Category:" open={openDrawer2Handler} />
+              <DrawerItem header="Width:" open={openDrawer2Handler} />
+              <DrawerItem header="Length:" text="0.04" open={openDrawer2Handler} />
+              <DrawerItem header="Material:" text="cotton" open={openDrawer2Handler} />
+              <DrawerItem header="Color:" text="beige" open={openDrawer2Handler} />
             </div>
-            <button className="filter_button" onClick={() => setOpen2(true)}><span className="filter_button_text">Filter</span></button>
+            <button className="filter_button"><span className="filter_button_text">Filter</span></button>
           </div>
         </Drawer>
+
+
+
 
         <Drawer
           placement="right"
@@ -59,12 +67,23 @@ const Products = (props) => {
           open={open2}
           key={"placement"}
         >
-          <div className="drawer2_container">
+          <div className="drawer2_container" data-aos="fade-down">
             <DrawerHeader header="Color" icon="/burger-button.svg" close={closeDrawer2Handler} />
+              <div className="drawer2_items">
+                  <Filter_items text="Beige" />
+                  <Filter_items text="White" />
+                  <Filter_items text="Bordeaux" />
+                  <Filter_items text="Blue" />
+                  <Filter_items text="Yellow" />
+                  <Filter_items text="Yellow" />
+                  <Filter_items text="Yellow" />
+              </div>
             <button className="filter_button"><span className="filter_button_text">Choose</span></button>
 
           </div>
         </Drawer>
+
+
 
       <Navigation />
       <div className="navigasiyaDiv">
@@ -88,15 +107,31 @@ const Products = (props) => {
         </div>
 
         <div className="productsCardDiv">
+          <div className="product_Div" data-aos="fade-right">
             <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"} />
-        </div>
+          </div>
+          <div className="product_Div" data-aos="fade-right">
+            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-right">
+            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-right">
+            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div> 
+          <div className="product_Div" data-aos="fade-left">
+            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+          </div>
+       </div>
       
       </div>
 

@@ -3,10 +3,28 @@
     margin: 0 auto;
 }
 
-.drawer_container {
+.drawer_container, .drawer2_container {
     background-color: #fff;
-    padding: 10px;
+    padding: 15px 20px;
     min-height: 100vh;
+}
+
+@media only screen and (max-width: 22.5em) {
+    .drawer_container, .drawer2_container {
+        padding: 15px 15px 15px 45px; 
+    }
+}
+
+@media only screen and (max-width: 22.5em) {
+    .drawer2_container, .drawer_container {
+        padding-left: 65px;
+    }
+}
+
+@media only screen and (max-width: 19.375em) {
+    .drawer2_container, .drawer_container {
+        padding-left: 80px;
+    }
 }
 
 .filter_container {
@@ -40,6 +58,7 @@
     border-radius: 4px;
     background-color: #EBFAFF;
     cursor: pointer;
+    margin-top: 25px;
 }
 
 .filter_button_text {
