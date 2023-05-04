@@ -4,10 +4,21 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 64px;
-    margin-top: -35px;
 }
 
 .imgDiv {
+    margin: 0 auto;
     display: flex;
     gap: 40px;
+}
+
+/* @media only screen and (max-width: 87.5em) {
+    .imgDiv {
+        width: 90%;
+    }
+} */
+
+.imgDiv > img {
+    width: 100%;
+    object-fit: contain;
 }

@@ -61,7 +61,7 @@ const Navigation = (props) => {
       </Drawer>
 
         <div className="navLogo">
-          <img src={logo} alt="logo" className='navImg' />
+          <img src={logo} alt="logo" className='navImg' onClick={() => navigate("/homepage")} />
         </div>
 
         <div className="navContainer">

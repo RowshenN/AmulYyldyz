@@ -8,7 +8,7 @@ import { Context } from '../../context/Context'
 import Navigation from '../../components/navigation/Navigation'
 import Footer from '../../components/footer/Footer'
 import Section2 from './section2/Section2'
-// import ImgCarousel from './ImgCarousel/ImgCarousel'
+import ImgCarousel from './ImgCarousel/ImgCarousel'
 import Section3 from './section3/Section3'
 import Section4 from './section4/Section4'
 import Section5 from './section5/Section5'
@@ -18,7 +18,6 @@ import narrow2 from '../../images/right narrow.svg'
 import img1 from '../../images/home-img1.png'
 const Homepage = (props) => {
   const {dil } = useContext(Context);
-  console.log(dil)
     AOS.init({duration: 650, delay: 150})
 
   return (
@@ -51,7 +50,7 @@ const Homepage = (props) => {
       </div>
       
       <Section2 />
-      {/* <ImgCarousel /> */}
+      <ImgCarousel />
       <Section3 />
       <Section4 /> 
       <Section5 />

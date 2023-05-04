@@ -29,6 +29,7 @@
 
 .navLogo {
     width: 170px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 50em) {

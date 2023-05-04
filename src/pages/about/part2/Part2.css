@@ -85,6 +85,7 @@
 .part2H2 {
     font-size: 18px;
     font-family: "neue-medium";
+    font-weight: 500;
     margin-top: 0px;
     color: #161616;
 }
@@ -93,6 +94,7 @@
     color: #161616;
     font-size: 18px;
     font-family: "neue-medium";
+    font-weight: 500;
 }
 
 .part2P {

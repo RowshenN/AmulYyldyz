@@ -10,7 +10,7 @@ import Card from '../../components/card/Card'
 import Pagename from '../../components/pagename/Pagename'
 import { Context } from '../../context/Context'
 
-AOS.init({duration: 600, delay: 100})
+AOS.init({duration: 600, delay: 150})
 
 const Favorites = () => {
   const {dil} = useContext(Context)

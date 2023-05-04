@@ -21,10 +21,6 @@ const Products = (props) => {
   const {dil} = useContext(Context)
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const closeDrawerHandler = () => {
-    setOpen(false);
-  }
-
   const [open2, setOpen2] = useState(false)
   const closeDrawer2Handler = () => {
     setOpen2(false);
@@ -32,7 +28,12 @@ const Products = (props) => {
   const openDrawer2Handler = () =>{
     setOpen2(true)
   };
-  AOS.init({duration: 600, delay: 100}) 
+  AOS.init({duration: 600, delay: 150}) 
+
+  const [openCategory, setOpenCategory] = useState(false);
+  const [openWidth, setOpenWidth] = useState(false);
+  const [openLength, setOpenLength] = useState(false);
+  const [openMaterial, setOpenMaterial] = useState(false);
 
   return (
     <div>
@@ -45,18 +46,110 @@ const Products = (props) => {
          key={"placement"}
         >
           <div className="drawer_container" data-aos="fade-up">
-            <DrawerHeader header="Filter" icon="/left.svg" close={closeDrawerHandler} />
+            <DrawerHeader header="Filter" icon="/left.svg" close={() => setOpen(false)} />
             <div className="drawer_items">
-              <DrawerItem header="Category:" open={openDrawer2Handler} />
-              <DrawerItem header="Width:" open={openDrawer2Handler} />
-              <DrawerItem header="Length:" text="0.04" open={openDrawer2Handler} />
-              <DrawerItem header="Material:" text="cotton" open={openDrawer2Handler} />
+              <DrawerItem header="Category:" open={() => setOpenCategory(true)} />
+              <DrawerItem header="Width:" open={() => setOpenWidth(true)} />
+              <DrawerItem header="Length:" text="0.04" open={() => setOpenLength(true)} />
+              <DrawerItem header="Material:" text="cotton" open={() => setOpenMaterial(true)} />
               <DrawerItem header="Color:" text="beige" open={openDrawer2Handler} />
             </div>
             <button className="filter_button"><span className="filter_button_text">Filter</span></button>
           </div>
         </Drawer>
 
+
+
+        <Drawer
+         placement="right"
+         closable={false}
+         onClose={()=>setOpenCategory(false)}
+         open={openCategory}
+         key={"placement"}
+        >
+          <div className="drawer2_container" data-aos="fade-down">
+           <DrawerHeader header="Category" icon="/burger-button.svg" close={()=>setOpenCategory(false)} />
+           <div className="drawer2_items">
+             <Filter_items text="Category" />
+             <Filter_items text="Category" />
+             <Filter_items text="Category" />
+             <Filter_items text="Category" />
+             <Filter_items text="Category" />
+             <Filter_items text="Category" />
+             <Filter_items text="Category" />
+            </div>
+            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+          </div>          
+        </Drawer>
+
+
+        <Drawer
+         placement="right"
+         closable={false}
+         onClose={()=>setOpenWidth(false)}
+         open={openWidth}
+         key={"placement"}
+        >
+          <div className="drawer2_container" data-aos="fade-down">
+           <DrawerHeader header="Width" icon="/burger-button.svg" close={()=>setOpenWidth(false)} />
+           <div className="drawer2_items">
+             <Filter_items text="Width" />
+             <Filter_items text="Width" />
+             <Filter_items text="Width" />
+             <Filter_items text="Width" />
+             <Filter_items text="Width" />
+             <Filter_items text="Width" />
+             <Filter_items text="Width" />
+            </div>
+            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+          </div>          
+        </Drawer>
+
+
+        <Drawer
+         placement="right"
+         closable={false}
+         onClose={()=>setOpenLength(false)}
+         open={openLength}
+         key={"placement"}
+        >
+          <div className="drawer2_container" data-aos="fade-down">
+           <DrawerHeader header="Length" icon="/burger-button.svg" close={()=>setOpenLength(false)} />
+           <div className="drawer2_items">
+             <Filter_items text="Length" />
+             <Filter_items text="Length" />
+             <Filter_items text="Length" />
+             <Filter_items text="Length" />
+             <Filter_items text="Length" />
+             <Filter_items text="Length" />
+             <Filter_items text="Length" />
+            </div>
+            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+          </div>          
+        </Drawer>
+
+
+        <Drawer
+         placement="right"
+         closable={false}
+         onClose={()=>setOpenMaterial(false)}
+         open={openMaterial}
+         key={"placement"}
+        >
+          <div className="drawer2_container" data-aos="fade-down">
+           <DrawerHeader header="Material" icon="/burger-button.svg" close={()=>setOpenMaterial(false)} />
+           <div className="drawer2_items">
+             <Filter_items text="Material" />
+             <Filter_items text="Material" />
+             <Filter_items text="Material" />
+             <Filter_items text="Material" />
+             <Filter_items text="Material" />
+             <Filter_items text="Material" />
+             <Filter_items text="Material" />
+            </div>
+            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+          </div>          
+        </Drawer>
 
 
 
@@ -79,11 +172,8 @@ const Products = (props) => {
                   <Filter_items text="Yellow" />
               </div>
             <button className="filter_button"><span className="filter_button_text">Choose</span></button>
-
           </div>
         </Drawer>
-
-
 
       <Navigation />
       <div className="navigasiyaDiv">

@@ -15,7 +15,7 @@ const Footer = () => {
     <div>
       <div className="footerDiv">
         <div className="footerLogoDiv">
-          <img src={logo} alt="logo" className='footerlogo' />
+          <img src={logo} alt="logo" className='footerlogo' onClick={() => navigate("/homepage")} />
         </div>
 
         <div className="footerNavDIv">
