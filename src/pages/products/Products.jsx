@@ -21,14 +21,14 @@ const Products = (props) => {
   const {dil} = useContext(Context);
 
   const [brends, setBrends] = useState([
-    { id: 1, name: "Mars" },
-    { id: 1, name: "Pepsi" },
-    { id: 1, name: "Colo" },
-    { id: 1, name: "Snicers" },
-    { id: 1, name: "Turan" },
-    { id: 1, name: "Apple" },
-    { id: 1, name: "Fanta" },
-    { id: 1, name: "Sprite" },
+    { id: 1, name: "Beige" },
+    { id: 2, name: "White" },
+    { id: 3, name: "Bordeaux" },
+    { id: 4, name: "Snicers" },
+    { id: 5, name: "Blue" },
+    { id: 6, name: "Yellow" },
+    { id: 7, name: "Red" },
+    { id: 8, name: "Silver" },
 ]);
 
 const [filterBrends, setFilterBrends] = useState(brends);
@@ -214,9 +214,10 @@ const SearchBrends = (value) => {
 <div className='w-[90%] my-4 mx-auto flex justify-between'>
   <div className='md1:block hidden'>
     {/* filter */}
+
     <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
                     <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
-                        Material
+                        {dil === "RU" ? "Категория" : "Category"}
                     </h1>
                    
                     <div
@@ -237,7 +238,7 @@ const SearchBrends = (value) => {
                                         htmlFor="brend1"
                                         className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
                                     >
-                                        
+                                        {dil === "RU" ? "Полотенца" : "Towels"}
                                     </label>
                                 </div>
                         
@@ -249,13 +250,79 @@ const SearchBrends = (value) => {
                                     <input
                                         className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
                                         type="checkbox"
-                                        id="brend1"
+                                        id="brend2"
                                     />
                                     <label
-                                        htmlFor="brend1"
+                                        htmlFor="brend2"
                                         className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
                                     >
-                                        name
+                                        {dil === "RU" ? "Простыни" : "Bedsheets"}
+                                    </label>
+                                </div>
+                           
+                    </div>
+                </div>
+
+    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
+                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
+                        {dil === "RU" ? "Ширина" : "Width"}
+                    </h1>
+                   
+                    <div
+                        style={{ scrollbarColor: "#32BB78" }}
+                        className="max-h-[250px] overflow-auto scrollbar-hide"
+                    >
+                               <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend3"
+                                    />
+                                    <label
+                                        htmlFor="brend3"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        0.53
+                                    </label>
+                                </div>
+                        
+                                <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend4"
+                                    />
+                                    <label
+                                        htmlFor="brend4"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        0.70
+                                    </label>
+                                </div>
+
+                                <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend5"
+                                    />
+                                    <label
+                                        htmlFor="brend5"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        3.00
                                     </label>
                                 </div>
                            
@@ -263,7 +330,123 @@ const SearchBrends = (value) => {
                 </div>
     <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
                     <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
-                        Brendlar
+                        {dil === "RU" ? "Длина" : "Length"}
+                    </h1>
+                   
+                    <div
+                        style={{ scrollbarColor: "#32BB78" }}
+                        className="max-h-[250px] overflow-auto scrollbar-hide"
+                    >
+                               <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend6"
+                                    />
+                                    <label
+                                        htmlFor="brend6"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        10.05
+                                    </label>
+                                </div>
+                        
+                                <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend7"
+                                    />
+                                    <label
+                                        htmlFor="brend7"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        10.50
+                                    </label>
+                                </div>
+
+                                <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend8"
+                                    />
+                                    <label
+                                        htmlFor="brend8"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        3.00
+                                    </label>
+                                </div>
+                           
+                    </div>
+                </div>
+
+
+    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
+                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
+                        {dil === "RU" ? "Материал" : "Material"}
+                    </h1>
+                   
+                    <div
+                        style={{ scrollbarColor: "#32BB78" }}
+                        className="max-h-[250px] overflow-auto scrollbar-hide"
+                    >
+                               <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend9"
+                                    />
+                                    <label
+                                        htmlFor="brend9"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        {dil === "RU" ? "Шелк" : "Silk"}
+                                    </label>
+                                </div>
+                        
+                                <div 
+                                    className={
+                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                                    }
+                                >
+                                    <input
+                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
+                                        type="checkbox"
+                                        id="brend10"
+                                    />
+                                    <label
+                                        htmlFor="brend10"
+                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                    >
+                                        {dil === "RU" ? "Хлопок" : "Cotton"}
+                                    </label>
+                                </div>
+                           
+                    </div>
+                </div>
+
+
+    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
+                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
+                        {dil === "RU" ? "Цвет" : "Color"}
                     </h1>
                     <input
                         onKeyUp={(e) => SearchBrends(e.target.value)}
@@ -286,10 +469,10 @@ const SearchBrends = (value) => {
                                     <input
                                         className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
                                         type="checkbox"
-                                        id="brend1"
+                                        id="brend11"
                                     />
                                     <label
-                                        htmlFor="brend1"
+                                        htmlFor="brend11"
                                         className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
                                     >
                                         {item.name}

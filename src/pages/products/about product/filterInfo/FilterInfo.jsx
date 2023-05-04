@@ -7,12 +7,10 @@ const FilterInfo = (props) => {
     <div>
 
         <div className="filterinfoContainer">
-
             <div className="filterinfoDiv">
                 <p className='infoname'>{props.name}</p>
                 <p className="infotext">{props.text}</p>
             </div>
-
         </div>
       
     </div>
