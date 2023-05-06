@@ -15,6 +15,7 @@ import { Drawer } from 'antd'
 import DrawerItem from './drawerItem/DrawerItem'
 import DrawerHeader from './DrawerHeader/DrawerHeader'
 import Filter_items from './drawer_filter_items/Filter_items'
+import CheckBox from '../../components/checked/checkbox'
 
 
 const Products = (props) => {
@@ -52,7 +53,7 @@ const SearchBrends = (value) => {
   const openDrawer2Handler = () =>{
     setOpen2(true)
   };
-  AOS.init({duration: 600, delay: 150}) 
+  AOS.init({duration: 700, delay: 150}) 
 
   const [openCategory, setOpenCategory] = useState(false);
   const [openWidth, setOpenWidth] = useState(false);
@@ -70,18 +71,17 @@ const SearchBrends = (value) => {
          key={"placement"}
         >
           <div className="drawer_container" data-aos="fade-up">
-            <DrawerHeader header="Filter" icon="/left.svg" close={() => setOpen(false)} />
-            <div className="drawer_items">
-              <DrawerItem header="Category:" open={() => setOpenCategory(true)} />
-              <DrawerItem header="Width:" open={() => setOpenWidth(true)} />
-              <DrawerItem header="Length:" text="0.04" open={() => setOpenLength(true)} />
-              <DrawerItem header="Material:" text="cotton" open={() => setOpenMaterial(true)} />
-              <DrawerItem header="Color:" text="beige" open={openDrawer2Handler} />
+            <DrawerHeader header={dil === "RU" ? "Фильтр" : "Filter"} icon="/left.svg" close={() => setOpen(false)} />
+            <div className="drawer_items pt-4">
+              <DrawerItem header={dil === "RU" ? "Категория:" : "Category:"} open={() => setOpenCategory(true)} />
+              <DrawerItem header={dil === "RU" ? "Ширина:" : "Width:"} open={() => setOpenWidth(true)} />
+              <DrawerItem header={dil === "RU" ? "Длина:" : "Length:"} text="0.04" open={() => setOpenLength(true)} />
+              <DrawerItem header={dil === "RU" ? "Материал:" : "Material:"} text={dil === "RU" ? "хлопок" : "cotton"} open={() => setOpenMaterial(true)} />
+              <DrawerItem header={dil === "RU" ? "Цвет:" : "Color:"} text={dil === "RU" ? "бежевый" : "beige"} open={openDrawer2Handler} />
             </div>
-            <button className="filter_button"><span className="filter_button_text">Filter</span></button>
+            <button className="filter_button"><span className="filter_button_text">{dil === "RU" ? "Фильтр" : "Filter"}</span></button>
           </div>
         </Drawer>
-
 
 
         <Drawer
@@ -92,17 +92,12 @@ const SearchBrends = (value) => {
          key={"placement"}
         >
           <div className="drawer2_container" data-aos="fade-down">
-           <DrawerHeader header="Category" icon="/burger-button.svg" close={()=>setOpenCategory(false)} />
-           <div className="drawer2_items">
-             <Filter_items text="Category" />
-             <Filter_items text="Category" />
-             <Filter_items text="Category" />
-             <Filter_items text="Category" />
-             <Filter_items text="Category" />
-             <Filter_items text="Category" />
-             <Filter_items text="Category" />
+           <DrawerHeader header={dil === "RU" ? "Категория" : "Category"} icon="/burger-button.svg" close={()=>setOpenCategory(false)} />
+           <div className="drawer2_items pt-4">
+             <Filter_items text={dil === "RU" ? "Полотенца" : "Towels"} />
+             <Filter_items text={dil === "RU" ? "Простыни" : "Bedsheets"} />
             </div>
-            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+            <button className="filter_button"><span className="filter_button_text">{dil === "RU" ? "Выбирать" : "Choose"}</span></button>
           </div>          
         </Drawer>
 
@@ -115,17 +110,13 @@ const SearchBrends = (value) => {
          key={"placement"}
         >
           <div className="drawer2_container" data-aos="fade-down">
-           <DrawerHeader header="Width" icon="/burger-button.svg" close={()=>setOpenWidth(false)} />
-           <div className="drawer2_items">
-             <Filter_items text="Width" />
-             <Filter_items text="Width" />
-             <Filter_items text="Width" />
-             <Filter_items text="Width" />
-             <Filter_items text="Width" />
-             <Filter_items text="Width" />
-             <Filter_items text="Width" />
+           <DrawerHeader header={dil === "RU" ? "Ширина" : "Width"} icon="/burger-button.svg" close={()=>setOpenWidth(false)} />
+           <div className="drawer2_items pt-4">
+             <Filter_items text="0.53" />
+             <Filter_items text="0.70" />
+             <Filter_items text="3.00" />
             </div>
-            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+            <button className="filter_button"><span className="filter_button_text">{dil === "RU" ? "Выбирать" : "Choose"}</span></button>
           </div>          
         </Drawer>
 
@@ -138,17 +129,13 @@ const SearchBrends = (value) => {
          key={"placement"}
         >
           <div className="drawer2_container" data-aos="fade-down">
-           <DrawerHeader header="Length" icon="/burger-button.svg" close={()=>setOpenLength(false)} />
-           <div className="drawer2_items">
-             <Filter_items text="Length" />
-             <Filter_items text="Length" />
-             <Filter_items text="Length" />
-             <Filter_items text="Length" />
-             <Filter_items text="Length" />
-             <Filter_items text="Length" />
-             <Filter_items text="Length" />
+           <DrawerHeader header={dil === "RU" ? "Длина" : "Length"} icon="/burger-button.svg" close={()=>setOpenLength(false)} />
+           <div className="drawer2_items pt-4">
+             <Filter_items text="10.05" />
+             <Filter_items text="10.50" />
+             <Filter_items text="3.00" />
             </div>
-            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+            <button className="filter_button"><span className="filter_button_text">{dil === "RU" ? "Выбирать" : "Choose"}</span></button>
           </div>          
         </Drawer>
 
@@ -161,17 +148,12 @@ const SearchBrends = (value) => {
          key={"placement"}
         >
           <div className="drawer2_container" data-aos="fade-down">
-           <DrawerHeader header="Material" icon="/burger-button.svg" close={()=>setOpenMaterial(false)} />
-           <div className="drawer2_items">
-             <Filter_items text="Material" />
-             <Filter_items text="Material" />
-             <Filter_items text="Material" />
-             <Filter_items text="Material" />
-             <Filter_items text="Material" />
-             <Filter_items text="Material" />
-             <Filter_items text="Material" />
+           <DrawerHeader header={dil === "RU" ? "Материал" : "Material"} icon="/burger-button.svg" close={()=>setOpenMaterial(false)} />
+           <div className="drawer2_items pt-4">
+             <Filter_items text={dil === "RU" ? "Шелк" : "Silk"} />
+             <Filter_items text={dil === "RU" ? "Хлопок" : "Cotton"} />
             </div>
-            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+            <button className="filter_button"><span className="filter_button_text">{dil === "RU" ? "Выбирать" : "Choose"}</span></button>
           </div>          
         </Drawer>
 
@@ -184,17 +166,17 @@ const SearchBrends = (value) => {
           key={"placement"}
         >
           <div className="drawer2_container" data-aos="fade-down">
-            <DrawerHeader header="Color" icon="/burger-button.svg" close={closeDrawer2Handler} />
-              <div className="drawer2_items">
-                  <Filter_items text="Beige" />
-                  <Filter_items text="White" />
-                  <Filter_items text="Bordeaux" />
-                  <Filter_items text="Blue" />
-                  <Filter_items text="Yellow" />
-                  <Filter_items text="Yellow" />
-                  <Filter_items text="Yellow" />
+            <DrawerHeader header={dil === "RU" ? "Цвет" : "Color"} icon="/burger-button.svg" close={closeDrawer2Handler} />
+              <div className="drawer2_items pt-4">
+                  <Filter_items text={dil === "RU" ? "Бежевый" : "Beige"} />
+                  <Filter_items text={dil === "RU" ? "Белый" : "White"} />
+                  <Filter_items text={dil === "RU" ? "Бордо" : "Bordeaux"} />
+                  <Filter_items text={dil === "RU" ? "Синий" : "Blue"} />
+                  <Filter_items text={dil === "RU" ? "Желтый" : "Yellow"} />
+                  <Filter_items text={dil === "RU" ? "Желтый" : "Yellow"} />
+                  <Filter_items text={dil === "RU" ? "Желтый" : "Yellow"} />
               </div>
-            <button className="filter_button"><span className="filter_button_text">Choose</span></button>
+            <button className="filter_button"><span className="filter_button_text">{dil === "RU" ? "Выбирать" : "Choose"}</span></button>
           </div>
         </Drawer>
 
@@ -208,128 +190,90 @@ const SearchBrends = (value) => {
       </div>
 
       <div className="filter_container">
-        <button className="filter_button" onClick={() => setOpen(true)}><img src={icon} alt="icon" className='filter_icon' /><span className="filter_button_text">Filter (2)</span></button>
+        <button className="filter_button" onClick={() => setOpen(true)}><img src={icon} alt="icon" className='filter_icon' /><span className="filter_button_text">{dil === "RU" ? "Фильтр (2)" : "Filter (2)"}</span></button>
       </div>
 
 <div className='w-[90%] my-4 mx-auto flex justify-between'>
-  <div className='md1:block hidden'>
-    {/* filter */}
+  <div className='md1:block hidden' data-aos="fade-right">
+      {/* filter */}
 
-    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
-                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
-                        {dil === "RU" ? "Категория" : "Category"}
-                    </h1>
+       <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300" data-aos="fade-down">
+            <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-pts text-left">
+                {dil === "RU" ? "Категория" : "Category"}
+            </h1>
                    
-                    <div
-                        style={{ scrollbarColor: "#32BB78" }}
-                        className="max-h-[250px] overflow-auto scrollbar-hide"
+           <div style={{ scrollbarColor: "#32BB78" }} className="max-h-[250px] overflow-auto scrollbar-hide">
+                <div className={"flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"}>
+                  <CheckBox />
+                   <span
+                     htmlFor="brend1"
+                     className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                     >
-                               <div 
-                                    className={
-                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
-                                    }
-                                >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend1"
-                                    />
-                                    <label
-                                        htmlFor="brend1"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
-                                    >
-                                        {dil === "RU" ? "Полотенца" : "Towels"}
-                                    </label>
-                                </div>
+                      {dil === "RU" ? "Полотенца" : "Towels"}
+                   </span>
+               </div>
                         
-                                <div 
-                                    className={
-                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
-                                    }
-                                >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend2"
-                                    />
-                                    <label
-                                        htmlFor="brend2"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
-                                    >
-                                        {dil === "RU" ? "Простыни" : "Bedsheets"}
-                                    </label>
-                                </div>
-                           
-                    </div>
-                </div>
+               <div 
+                   className={
+                     "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                   }>
+                  <CheckBox />
+                   <span
+                      htmlFor="brend2"
+                      className="text-[16px] font-light cursor-pointer text-neutral-900 font-[300] "
+                    >
+                       {dil === "RU" ? "Простыни" : "Bedsheets"}
+                   </span>
+                </div>          
+            </div>
+       </div>
 
-    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
-                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
-                        {dil === "RU" ? "Ширина" : "Width"}
-                    </h1>
+       <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300" data-aos="fade-up">
+           <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-pts text-left">
+              {dil === "RU" ? "Ширина" : "Width"}
+           </h1>
                    
-                    <div
-                        style={{ scrollbarColor: "#32BB78" }}
-                        className="max-h-[250px] overflow-auto scrollbar-hide"
+           <div style={{ scrollbarColor: "#32BB78" }} className="max-h-[250px] overflow-auto scrollbar-hide">
+                <div 
+                    className={
+                     "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
+                    }
+                >
+                   <CheckBox />
+                    <span
+                      htmlFor="brend3"
+                      className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                      
                     >
-                               <div 
-                                    className={
-                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
-                                    }
-                                >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend3"
-                                    />
-                                    <label
-                                        htmlFor="brend3"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
-                                    >
-                                        0.53
-                                    </label>
-                                </div>
-                        
-                                <div 
-                                    className={
-                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
-                                    }
-                                >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend4"
-                                    />
-                                    <label
-                                        htmlFor="brend4"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
-                                    >
-                                        0.70
-                                    </label>
-                                </div>
-
-                                <div 
-                                    className={
-                                        "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
-                                    }
-                                >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend5"
-                                    />
-                                    <label
-                                        htmlFor="brend5"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
-                                    >
-                                        3.00
-                                    </label>
-                                </div>
-                           
-                    </div>
+                      0.53
+                    </span>
                 </div>
-    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
-                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
+                        
+               <div className={"flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"}>
+                    <CheckBox />
+                    <span
+                        htmlFor="brend4"
+                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                    >
+                        0.70
+                    </span>
+               </div>
+
+                <div className={"flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"}>
+                   <CheckBox />
+                    <span
+                        htmlFor="brend5"
+                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                    >
+                        3.00
+                    </span>
+                </div>            
+           </div>
+      </div>
+
+
+       <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300" data-aos="fade-up">
+                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-pts text-left">
                         {dil === "RU" ? "Длина" : "Length"}
                     </h1>
                    
@@ -342,17 +286,13 @@ const SearchBrends = (value) => {
                                         "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
                                     }
                                 >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend6"
-                                    />
-                                    <label
+                                   <CheckBox />
+                                    <span
                                         htmlFor="brend6"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                                     >
                                         10.05
-                                    </label>
+                                    </span>
                                 </div>
                         
                                 <div 
@@ -360,17 +300,13 @@ const SearchBrends = (value) => {
                                         "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
                                     }
                                 >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend7"
-                                    />
-                                    <label
+                                    <CheckBox />
+                                    <span
                                         htmlFor="brend7"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                                     >
                                         10.50
-                                    </label>
+                                    </span>
                                 </div>
 
                                 <div 
@@ -378,25 +314,21 @@ const SearchBrends = (value) => {
                                         "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
                                     }
                                 >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend8"
-                                    />
-                                    <label
+                                    <CheckBox />
+                                    <span
                                         htmlFor="brend8"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                                     >
                                         3.00
-                                    </label>
+                                    </span>
                                 </div>
                            
                     </div>
-                </div>
+       </div>
 
 
-    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
-                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
+       <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300" data-aos="fade-up">
+                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-pts text-left">
                         {dil === "RU" ? "Материал" : "Material"}
                     </h1>
                    
@@ -409,17 +341,13 @@ const SearchBrends = (value) => {
                                         "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
                                     }
                                 >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend9"
-                                    />
-                                    <label
+                                    <CheckBox />
+                                    <span
                                         htmlFor="brend9"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                                     >
                                         {dil === "RU" ? "Шелк" : "Silk"}
-                                    </label>
+                                    </span>
                                 </div>
                         
                                 <div 
@@ -427,25 +355,21 @@ const SearchBrends = (value) => {
                                         "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
                                     }
                                 >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend10"
-                                    />
-                                    <label
+                                    <CheckBox />
+                                    <span
                                         htmlFor="brend10"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                                     >
                                         {dil === "RU" ? "Хлопок" : "Cotton"}
-                                    </label>
+                                    </span>
                                 </div>
                            
                     </div>
-                </div>
+       </div>
 
 
-    <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300">
-                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-semi text-left">
+       <div className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300" data-aos="fade-up">
+                    <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-pts text-left">
                         {dil === "RU" ? "Цвет" : "Color"}
                     </h1>
                     <input
@@ -466,57 +390,55 @@ const SearchBrends = (value) => {
                                         "flex items-center py-3 text-left   border-t-[1px] border-t-neutral-300"
                                     }
                                 >
-                                    <input
-                                        className="mr-3 bg-neutral-300 text-neutral-300 border-neutral-300 w-[16px] h-[16px] "
-                                        type="checkbox"
-                                        id="brend11"
-                                    />
-                                    <label
+                                    <CheckBox />
+                                    <span
                                         htmlFor="brend11"
-                                        className="text-[16px] cursor-pointer text-neutral-900 font-[300] "
+                                        className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
                                     >
                                         {item.name}
-                                    </label>
+                                    </span>
                                 </div>
                             );
                         })}
                     </div>
-                </div>
+       </div>
   </div>
 
   {/* products */}
       <div className="productsContainer">
-        <div className="FilterContainer md1:ml-4 ml-0">
+        <div className="FilterContainer md1:ml-4 ml-0 items-baseline">
          <h1 className="filterH1" data-aos="flip-left">{dil === "RU" ? "Фильтр:" :"Filter:"}</h1>
+         <div className='flex flex-wrap justify-start'>
          <FilterText  header={dil === "RU" ? "Длина" : "Length"} text="0.05"/>
          <FilterText  header={dil === "RU" ? "Ширина" : "Width"} text="3.00"/>
          <FilterText  header={dil === "RU" ? "Цвет" : "Color"} text={dil === "RU" ? "Коричневый" :"Brown"} />
+         </div>
         </div>
 
         <div className="productsCardDiv md1:ml-4 ml-0">
           <div className="product_Div !w-fit" data-aos="fade-right">
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="carImg.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div>
           <div className="product_Div" data-aos="fade-right">
-            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="cardimg2.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div> 
           <div className="product_Div" data-aos="fade-left">
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="carImg.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div> 
           <div className="product_Div" data-aos="fade-left">
-            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="cardimg2.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div> 
           <div className="product_Div" data-aos="fade-right">
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="carImg.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div> 
           <div className="product_Div" data-aos="fade-right">
-            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="cardimg2.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div> 
           <div className="product_Div" data-aos="fade-left">
-            <Card surat="carImg.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="carImg.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div> 
           <div className="product_Div" data-aos="fade-left">
-            <Card surat="cardimg2.png" heart="false" name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
+            <Card surat="cardimg2.png"  name={dil === "RU" ? "Полотенце Oasis Ombre" : "Oasis Ombre Towel"}/>
           </div>
        </div>
  

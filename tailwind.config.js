@@ -86,6 +86,12 @@ module.exports = {
       //     "extra-bold": "800",
       //     black: "900",
       // },
+      fontFamily:{
+        pts: "pts",
+        medium: "neue-medium",
+        regular:"neue-regular",
+        light:"neue-light"
+      }
      
   },
   plugins: [require("tailwind-scrollbar-hide")],

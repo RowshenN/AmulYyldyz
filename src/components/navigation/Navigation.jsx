@@ -76,7 +76,7 @@ const Navigation = (props) => {
 
         <div className="languageChangeDiv">
           <div className="languageDiv">
-            <img src={lang} alt="lang"  />
+            <img src={lang} alt="lang" className='languageIcon'  />
             <span className="languageName">{dil=="RU"?"Русский":"English"}</span> 
             <img src={narrowdown} alt="narrowdown" className='narrowdown' />
 
@@ -88,7 +88,7 @@ const Navigation = (props) => {
          {props?.close ?
             <div onClick={()=>props?.closeDrawerHandler()} className="BurgerButton">
               <div className="BurgerButton2" >
-               <span> <img src={cancel} alt="cancel" /> </span>
+               <span> <img src={cancel} alt="cancel" className='w-full object-contain h-full' /> </span>
               </div>
             </div>:
            <div onClick={()=>setOpen(true)} className="BurgerButton">

@@ -63,6 +63,7 @@
     line-height: 150%;
     margin-top: -8px;
     color: #161616;
+    padding-bottom: 20px;
 }
 
 .section3text {
@@ -70,7 +71,7 @@
     font-size: 18px;
     line-height: 150%;
     color: #161616;
-    margin-top: -15px;
+    padding-bottom: 15px;
 }
 
 .section3button {

@@ -122,34 +122,6 @@
     
 }
 
-.infoText0 {
-    padding-bottom: 35px;
-    margin: 0px;
-}
-
-.infoText1 {
-    margin: 0px;
-}
-
-.infoText2 {
-    padding-top: 20px;
-}
-
-.infoText3 {
-    margin: 0px;
-}
-
-.infoButonDiv {
-    position: relative;
-}
-
-.heart-icon {
-    position: absolute;
-    top: 15px;
-    left: 26px;
-    z-index: 10;
-}
-
 @media only screen and (max-width: 90.625em) {
     .aboutHeader {
         padding-bottom: 15px;
@@ -162,21 +134,22 @@
     .infoTextDiv {
         padding-bottom: 5px;
     }
+}
 
-    .infoText0 {
-        padding-bottom: 0px;
-        margin: 0px;
-    }
+.infoButonDiv {
+    position: relative;
+    cursor: pointer;
+}
 
-    .infoText2 {
-        padding: 0px;
-        margin: 0px;
-    }
-
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    z-index: 10;
 }
 
 .infobuton {
-    width: 219px;
+    width: fit-content;
     height: 48px;
     border-radius: 120px;
     border: none;
@@ -192,5 +165,7 @@
     font-family: "neue-medium";
     line-height: 18px;
     padding-left: 40px;
+    padding-right: 20px;
     color: #161616;
+    white-space: nowrap;
 }

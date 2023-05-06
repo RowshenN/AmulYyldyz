@@ -3,7 +3,6 @@ import React ,{ useState, useEffect,createContext} from "react";
 export const Context = createContext();
 
 const ContextProvider = (props)=>{
-    
      
     let localFav; 
         const favHarytlar = localStorage.getItem("FavHarytlar");

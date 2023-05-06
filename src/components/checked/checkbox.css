@@ -1,3 +1,4 @@
 .checked > img {
     cursor: pointer;
+    padding-right: 10px;
 }

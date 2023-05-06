@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './Section5.css'
 import img from '../../../images/section5.png'
@@ -6,6 +7,7 @@ import { Context } from '../../../context/Context'
 
 const Section5 = () => {
   const {dil} =useContext(Context)
+  const navigate = useNavigate();
   return (
     <div>
       
@@ -20,7 +22,7 @@ const Section5 = () => {
               {dil === "RU" ? "Нужны ли вам полотенца для ванной, тренажерного зала или бассейна, у нас есть широкий выбор вариантов, отвечающих вашим потребностям. Наши полотенца бывают разных размеров и цветов, так что вы сможете найти идеальное сочетание для вашего интерьера. Кроме того, они просты в уходе и долговечны, так что вы сможете наслаждаться ими долгие годы." 
               : "Whether you need towels for the bathroom, gym, or pool, we have a wide range of options to suit your needs. Our towels come in a variety of sizes and colors, so you can find the perfect match for your décor. Plus, they are easy to care for and long-lasting, so you can enjoy them for years to come."}
             </p>
-            <button className="section5button" data-aos="fade-up"><span className="section5butontext">{dil === "RU" ? "Перейти к полотенцам" : "Go to towels"}</span></button>
+            <button className="section5button" data-aos="fade-up" onClick={() => navigate("/products")}><span className="section5butontext">{dil === "RU" ? "Перейти к полотенцам" : "Go to towels"}</span></button>
           </div>
           <div className="section5ImgDiv" data-aos="fade-up">
             <img src={img} alt="img" className='section5Img' />

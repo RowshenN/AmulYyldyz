@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -16,10 +16,15 @@ import ContactForm from '../contact/contactform/ContactForm'
 import narrow from '../../images/left narrow.svg'
 import narrow2 from '../../images/right narrow.svg'
 import img1 from '../../images/home-img1.png'
+import Slider from 'react-slick'
+import { Carousel } from 'antd'
 const Homepage = (props) => {
   const {dil } = useContext(Context);
-    AOS.init({duration: 650, delay: 150})
-
+  const slider = useRef(null);
+  const [banners,setBanners] = useState([img1,img1,img1]);
+    AOS.init({duration: 700, delay: 150})
+    
+ 
   return (
     <div>
       <Navigation />
@@ -31,23 +36,43 @@ const Homepage = (props) => {
           </h1>
         </div>
       </div>
-      <div className="homeimgDiv">
-        <img src={img1} alt="img1" className='homeImg' data-aos="fade-left"/>
-        <div className="narrow1Div" 
-          data-aos="fade-up" 
-          data-aos-delay="300"
-          data-aos-ease="ease"
-        >
-          <img src={narrow} alt="narrow" className='narrow' />
-        </div>
-        <div className="narrow2Div" data-aos="fade-down" data-aos-delay="200">
-         <img src={narrow2} alt="narrow" className='narrow' />
-        </div>
-        <div className="homeImgTextDiv" data-aos="fade-down" data-aos-dalay="200">
-          <p className='homeImgText1'>01 /</p>
-          <p className="homeImgText2">03</p>
-        </div>
-      </div>
+     
+
+     
+              <div  className="relative mb-[60px] w-[90%] mx-auto lg:h-[400px] 2xl:h-[450px]">
+              <Carousel
+              className=' w-full  lg:h-[400px] 2xl:h-[450px]'
+              autoplay autoplaySpeed={5000} dots={false} infinite={true} 
+              waitForAnimate={true}
+              effect="fade"
+                ref={slider}
+               
+               >
+                {banners?.map((item,i) => {
+                  return (
+                    <img key={1} src={img1} alt="img1" className='lg:h-[400px] 2xl:h-[450px] w-full object-cover'  />
+                    );
+                  })}
+              </Carousel> 
+              <div onClick={() => slider.current.prev()} className="narrow1Div" 
+                // data-aos="fade-up"  
+                // data-aos-ease="ease"
+              >
+                <img src={narrow} alt="narrow" className='narrow' />
+              </div>
+              <div onClick={() => slider.current.next()} className="narrow2Div"
+              //  data-aos="fade-down" data-aos-delay="200"
+               >
+               <img src={narrow2} alt="narrow" className='narrow' />
+              </div>
+              <div className="homeImgTextDiv"
+              //  data-aos="fade-down" data-aos-dalay="200"
+               >
+                <p className='homeImgText1'>01/</p>
+                <p className="homeImgText2">03</p>
+              </div>
+            </div>
+				
       
       <Section2 />
       <ImgCarousel />

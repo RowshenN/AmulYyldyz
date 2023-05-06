@@ -34,7 +34,8 @@
 
 @media only screen and (max-width: 50em) {
     .navLogo {
-        padding-right: 20px;
+        padding-right: 15px;
+        width: 150px;
     }
 }
 
@@ -106,6 +107,13 @@
     position: relative;
 }
 
+@media only screen and (max-width: 60.625em) {
+    .languageDiv {
+        padding-right: 10px;
+        border-right: 1px solid #DDD7D2;
+    }
+}
+
 @media only screen and (max-width: 50em) {
     .languageDiv {
         padding: 0px 13px;
@@ -117,17 +125,14 @@
     .languageDiv {
         border-left: 1px solid #DDD7D2;
     }
+
+    .languageIcon {
+        padding-left: 15px;
+    }
 }
 
 .narrowdown {
     cursor: pointer;
-}
-
-@media only screen and (max-width: 60.625em) {
-    .narrowdown {
-        padding-right: 13px;
-        border-right: 1px solid #DDD7D2;
-    }
 }
 
 .languageDiv:hover .langTextDiv{
@@ -183,13 +188,12 @@
     .BurgerButton {
         cursor: pointer;
         height: 24px;
-        width: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         transition: all .3s;
-        padding-left: 20px;
+        padding-left: 10px;
     }
 }
 

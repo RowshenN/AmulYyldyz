@@ -121,33 +121,26 @@
     justify-content: space-between;
     position: absolute;
     left: 25px;
-    bottom: 0px;
+    bottom: 25px;
 }
 
 @media only screen and (max-width: 68.75em) {
     .homeImgTextDiv {
-        bottom: 11px;
+        bottom: 15px;
         left: 16px;
     }
 }
 
 @media only screen and (max-width: 43.75em) {
     .homeImgTextDiv {
-        bottom: 0px;
+        bottom: 10px;
         left: 13px;
-    }
-}
-
-@media only screen and (max-width: 37.5em) { 
-    .homeImgTextDiv {
-        bottom: -5px;
-        left: 10px;
     }
 }
 
 @media only screen and (max-width: 21.875em) { 
     .homeImgTextDiv {
-        bottom: -9px;
+        bottom: 5px;
     }
 }
 
@@ -158,7 +151,7 @@
     font-weight: 400;
 }
 
-@media only screen and (max-width: 68.75em) { 
+@media only screen and (max-width: 43.75em) { 
     .homeImgText1 {
         font-size: 28px;
     }
@@ -169,13 +162,13 @@
     font-weight: 400;
     font-family: 'pts';
     color: #ffff;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
-@media only screen and (max-width: 68.75em) { 
+@media only screen and (max-width: 43.75em) { 
     .homeImgText2 {
-        font-size: 18px;
-        margin-top: 30px;
+        font-size: 22px;
+        margin-top: 15px;
     }
 }
 

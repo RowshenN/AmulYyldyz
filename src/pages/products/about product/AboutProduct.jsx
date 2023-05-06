@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -10,9 +10,11 @@ import big from '../../../images/big.png'
 import small from '../../../images/small.png'
 import FilterInfo from './filterInfo/FilterInfo'
 import heart from '../../../images/simple-heart.svg'
+import redheart from '../../../images/redheart.svg'
 import { Context } from '../../../context/Context'
 
 const AboutProduct = (props) => {
+  const [added, setAdded] = useState(true);
   const {dil} = useContext(Context)
   const navigate = useNavigate();
   AOS.init({duration: 600, delay: 100})
@@ -58,19 +60,19 @@ const AboutProduct = (props) => {
                   </div>
 
                   <div className="infoTextDiv" data-aos="fade-left">
-                    <p className="infoText infoText0">Постельное белье 100% хлопок.</p>
-                    <p className="infoText infoText1">Размеры на односпальное постельное белье: </p>
-                    <p className="infoText infoText1">Наволочка: 50 x 70</p>
-                    <p className="infoText infoText1">Пододеяльник: 160 x 220</p>
-                    <p className="infoText infoText1">Простыня: 160 x 240</p>
-                    <p className="infoText infoText2">Размеры на двуспальное постельное белье: </p>
-                    <p className="infoText infoText3">Наволочка: 50 x 70</p>
-                    <p className="infoText infoText3">Пододеяльник: 200 x 220</p>
-                    <p className="infoText infoText3">Простыня: 240 x 260</p>
+                    <p className="infoText">Постельное белье 100% хлопок.</p>
+                    <p className='infoText'> Размеры на односпальное постельное белье:
+                     Наволочка: 50 x 70
+                     Пододеяльник: 160 x 220
+                     Простыня: 160 x 240
+                     Размеры на двуспальное постельное белье:
+                     Наволочка: 50 x 70
+                     Пододеяльник: 200 x 220
+                     Простыня: 240 x 260</p>
                   </div>
 
-                  <div className="infoButonDiv">
-                    <img src={heart} alt="heart" className="heart-icon" />
+                  <div className="infoButonDiv" onClick={() => setAdded(!added)}>
+                    {added ? <img src={heart} alt="heart" className="heart-icon" /> : <img src={redheart} alt="heart" className="heart-icon" /> }
                     <button className="infobuton"><span className="infobutonText">{dil === "RU" ? "Добавить в избранное" : "Add to favourites"}</span></button>
                   </div>
 
