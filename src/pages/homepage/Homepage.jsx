@@ -66,10 +66,8 @@ const Homepage = (props) => {
           {banners?.map((item, i) => {
             return (
               <img
-                key={i}
-                src={
-                  "http://192.168.100.27:8080/uploads/70105464170cardAdd2.jpg"
-                }
+                key={1}
+                src={BASE_URL + item?.img}
                 alt={"img" + i + 1}
                 className="lg:h-[400px] 2xl:h-[450px] w-full object-cover"
               />
