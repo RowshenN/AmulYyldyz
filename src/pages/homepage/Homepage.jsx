@@ -57,6 +57,7 @@ const Homepage = (props) => {
           className=" w-full  lg:h-[400px] 2xl:h-[450px]"
           autoplay
           autoplaySpeed={5000}
+          speed={5000}
           dots={false}
           infinite={true}
           waitForAnimate={true}
@@ -65,12 +66,25 @@ const Homepage = (props) => {
         >
           {banners?.map((item, i) => {
             return (
-              <img
-                key={1}
-                src={BASE_URL + item?.img}
-                alt={"img" + i + 1}
-                className="lg:h-[400px] 2xl:h-[450px] w-full object-cover"
-              />
+              <>
+                <img
+                  key={1}
+                  src={BASE_URL + item?.img}
+                  alt={"img" + i + 1}
+                  className="lg:h-[400px] 2xl:h-[450px] w-full object-cover"
+                />
+                <div
+                  className="homeImgTextDiv"
+                  //  data-aos="fade-down" data-aos-dalay="200"
+                >
+                  <p className="homeImgText1">
+                    {(i + 1).toString().padStart(2, 0)}/
+                  </p>
+                  <p className="homeImgText2">
+                    {banners?.length.toString().padStart(2, 0)}
+                  </p>
+                </div>
+              </>
             );
           })}
         </Carousel>
@@ -88,13 +102,6 @@ const Homepage = (props) => {
           //  data-aos="fade-down" data-aos-delay="200"
         >
           <img src={narrow2} alt="narrow" className="narrow" />
-        </div>
-        <div
-          className="homeImgTextDiv"
-          //  data-aos="fade-down" data-aos-dalay="200"
-        >
-          <p className="homeImgText1">01/</p>
-          <p className="homeImgText2">03</p>
         </div>
       </div>
 
