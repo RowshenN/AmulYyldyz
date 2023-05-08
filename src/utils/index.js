@@ -1,17 +1,17 @@
 export const logout = () => {
-    localStorage.removeItem("TDYAdmin");
+  localStorage.removeItem("amul");
 };
 
 export const isLogin = () => {
-    if (localStorage.getItem("TDYAdmin")) {
-        var data = JSON.parse(localStorage.getItem("TDYAdmin"));
-        if (data.token) {
-            return true;
-        } else {
-            localStorage.removeItem("TDYAdmin");
-            return false;
-        }
+  if (localStorage.getItem("amul")) {
+    var data = JSON.parse(localStorage.getItem("amul"));
+    if (data.token) {
+      return true;
     } else {
-        return false;
+      localStorage.removeItem("amul");
+      return false;
     }
+  } else {
+    return false;
+  }
 };
