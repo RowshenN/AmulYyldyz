@@ -14,13 +14,14 @@ import icon from "../../images/filter-icon.svg";
 import { Drawer } from "antd";
 import DrawerItem from "./drawerItem/DrawerItem";
 import DrawerHeader from "./DrawerHeader/DrawerHeader";
-import Filter_items from "./drawer_filter_items/Filter_items";
+// import Filter_items from "./drawer_filter_items/Filter_items";
 import CheckBox from "../../components/checked/checkbox";
 import { axiosInstance } from "../../utils/axiosIntance";
 
 const Products = (props) => {
   const { dil } = useContext(Context);
   const navigate = useNavigate();
+  
   const [Color, setColor] = useState([]);
   const [filterColor, setFilterColor] = useState(Color);
   const [category, setCategory] = useState([]);
@@ -28,6 +29,7 @@ const Products = (props) => {
   const [length, setLength] = useState([]);
   const [material, setMaterial] = useState([]);
   const [products, setProducts] = useState([]);
+
   const [categoryFilters,setCategoryFilters] = useState([])
   const [widthFilters,setWidthFilters] = useState([])
   const [lengthFilters,setLengthFilters] = useState([])
@@ -83,7 +85,7 @@ const Products = (props) => {
       setProducts(res.data);
     })
     .catch((err) => {console.log(err)})
-  }
+  };
 
   const getCategory = () => {
     axiosInstance
@@ -144,8 +146,8 @@ const Products = (props) => {
     let index;
     array.map((it,i)=>{
       if(it.id===item.id){
-          is_have=true;
-          index = i
+        is_have=true;
+        index = i
       }
     });
     if(is_have){
@@ -161,7 +163,6 @@ const Products = (props) => {
     let array = categoryFilters;  
       array.splice(index,1);
       setCategoryFilters([...array])
-   
   }
 
   const isCheckedCategory =async (id)=>{
@@ -175,7 +176,6 @@ const Products = (props) => {
     return is_have
   }
 
-  
 
   const createWidthFilter = (item,title)=>{
     let array = widthFilters;
@@ -252,7 +252,6 @@ const Products = (props) => {
     let array = materialFilters;  
       array.splice(index,1);
       setMaterialFilters([...array])
-   
   }
 
   const createColorFilter = (item,title)=>{
@@ -321,7 +320,7 @@ const Products = (props) => {
               open={openDrawer2Handler}
             />
           </div>
-          <button className="filter_button">
+          <button className="filter_button" onClick={() => setOpen(false)}>
             <span className="filter_button_text">
               {dil === "RU" ? "Фильтр" : "Filter"}
             </span>
@@ -342,11 +341,27 @@ const Products = (props) => {
             icon="/burger-button.svg"
             close={() => setOpenCategory(false)}
           />
-          <div className="drawer2_items pt-4">
-            <Filter_items text={dil === "RU" ? "Полотенца" : "Towels"} />
-            <Filter_items text={dil === "RU" ? "Простыни" : "Bedsheets"} />
-          </div>
-          <button className="filter_button">
+           {category?.map((itemCategory, i) => {
+            return <div onClick={()=>createCategoryFilter(itemCategory,{title_en:"Category",title_ru:"Категория"})} key={"category" + i}
+              style={{ scrollbarColor: "#32BB78" }}
+              className="max-h-[250px] overflow-auto scrollbar-hide"
+            >
+              <div
+                className={
+                  "flex items-center py-3 text-left border-t-[1px] pt-4 border-t-neutral-300"
+                }
+              >
+                <CheckBox   />
+                <span
+                  htmlFor="brend1"
+                  className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                >
+                  {dil === "RU" ? itemCategory?.name_ru : itemCategory?.name_en}
+                </span>
+              </div>
+ 
+            </div>})}
+          <button className="filter_button" onClick={() => setOpenCategory(false)}>
             <span className="filter_button_text">
               {dil === "RU" ? "Выбирать" : "Choose"}
             </span>
@@ -367,12 +382,26 @@ const Products = (props) => {
             icon="/burger-button.svg"
             close={() => setOpenWidth(false)}
           />
-          <div className="drawer2_items pt-4">
-            <Filter_items text="0.53" />
-            <Filter_items text="0.70" />
-            <Filter_items text="3.00" />
-          </div>
-          <button className="filter_button">
+           {width?.map((itemWidth, i) => {
+              return <div onClick={()=>createWidthFilter(itemWidth,{title_en:"Width",title_ru:"Ширина"})} key={"width" + i}
+              style={{ scrollbarColor: "#32BB78" }}
+              className="max-h-[250px] overflow-auto scrollbar-hide"
+            >
+              <div
+                className={
+                  "flex items-center py-3 text-left pt-4  border-t-[1px] border-t-neutral-300"
+                }
+              >
+                <CheckBox />
+                <span
+                  htmlFor="brend3"
+                  className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                >
+                  {itemWidth?.name}
+                </span>
+              </div> 
+            </div>})}
+          <button className="filter_button" onClick={() => setOpenWidth(false)}>
             <span className="filter_button_text">
               {dil === "RU" ? "Выбирать" : "Choose"}
             </span>
@@ -393,12 +422,26 @@ const Products = (props) => {
             icon="/burger-button.svg"
             close={() => setOpenLength(false)}
           />
-          <div className="drawer2_items pt-4">
-            <Filter_items text="10.05" />
-            <Filter_items text="10.50" />
-            <Filter_items text="3.00" />
-          </div>
-          <button className="filter_button">
+         {length?.map((itemLength, i) => {
+            return <div onClick={()=>createLengthFilter(itemLength,{title_en:"Length",title_ru:"Длина"})} key={"length" + i}
+              style={{ scrollbarColor: "#32BB78" }}
+              className="max-h-[250px] overflow-auto scrollbar-hide"
+            >
+              <div
+                className={
+                  "flex items-center py-3 text-left pt-4 border-t-[1px] border-t-neutral-300"
+                }
+              >
+                <CheckBox />
+                <span
+                  htmlFor="brend6"
+                  className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                >
+                  {itemLength?.name}
+                </span>
+              </div>
+            </div>})}
+          <button className="filter_button" onClick={() => setOpenLength(false)}>
             <span className="filter_button_text">
               {dil === "RU" ? "Выбирать" : "Choose"}
             </span>
@@ -419,11 +462,26 @@ const Products = (props) => {
             icon="/burger-button.svg"
             close={() => setOpenMaterial(false)}
           />
-          <div className="drawer2_items pt-4">
-            <Filter_items text={dil === "RU" ? "Шелк" : "Silk"} />
-            <Filter_items text={dil === "RU" ? "Хлопок" : "Cotton"} />
-          </div>
-          <button className="filter_button">
+          {material?.map((itemMaterial,i) => {
+              return <div onClick={()=>createMaterialFilter(itemMaterial,{title_en:"Material",title_ru:"Материал"})} key={"mat"+i}
+              style={{ scrollbarColor: "#32BB78" }}
+              className="max-h-[250px] overflow-auto scrollbar-hide"
+            >
+              <div
+                className={
+                  "flex items-center py-3 text-left pt-4  border-t-[1px] border-t-neutral-300"
+                }
+              >
+                <CheckBox />
+                <span
+                  htmlFor="brend9"
+                  className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                >
+                  {dil === "RU" ? itemMaterial?.name_ru : itemMaterial?.name_en}
+                </span>
+              </div>
+            </div>})}
+          <button className="filter_button" onClick={() => setOpenMaterial(false)}>
             <span className="filter_button_text">
               {dil === "RU" ? "Выбирать" : "Choose"}
             </span>
@@ -444,16 +502,37 @@ const Products = (props) => {
             icon="/burger-button.svg"
             close={closeDrawer2Handler}
           />
-          <div className="drawer2_items pt-4">
-            <Filter_items text={dil === "RU" ? "Бежевый" : "Beige"} />
-            <Filter_items text={dil === "RU" ? "Белый" : "White"} />
-            <Filter_items text={dil === "RU" ? "Бордо" : "Bordeaux"} />
-            <Filter_items text={dil === "RU" ? "Синий" : "Blue"} />
-            <Filter_items text={dil === "RU" ? "Желтый" : "Yellow"} />
-            <Filter_items text={dil === "RU" ? "Желтый" : "Yellow"} />
-            <Filter_items text={dil === "RU" ? "Желтый" : "Yellow"} />
-          </div>
-          <button className="filter_button">
+          <input
+              onKeyUp={(e) => SearchColor(e.target.value)}
+              className="w-full h-[50px] mt-2 outline-none p-4 rounded-[8px] border-[1px] border-neutral-300"
+              type="text"
+              placeholder="Search"
+            />
+            <div
+              style={{ scrollbarColor: "#32BB78" }}
+              className="max-h-[250px] overflow-auto scrollbar-hide pt-4"
+            >
+              {filterColor?.map((item, index) => {
+                return (
+                  <div
+                  onClick={()=>createColorFilter(item,{title_en:"Color",title_ru:"Цвет"})}
+                    key={"filtercolor"+index}
+                    className={
+                      "flex items-center py-3 text-left  pt-4 border-t-[1px] border-t-neutral-300"
+                    }
+                  >
+                    <CheckBox />
+                    <span
+                      htmlFor="brend11"
+                      className="text-[16px] cursor-pointer font-light text-neutral-900 font-[300] "
+                    >
+                      {dil === "RU" ? item?.name_ru : item?.name_en}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          <button className="filter_button" onClick={closeDrawer2Handler}>
             <span className="filter_button_text">
               {dil === "RU" ? "Выбирать" : "Choose"}
             </span>
@@ -492,8 +571,7 @@ const Products = (props) => {
           {/* filter */}
 
           <div
-            className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300"
-            
+            className="w-full px-4 mb-4 select-none rounded-[8px] border-[1px] border-neutral-300" 
           >
             <h1 className="py-3 text-[20px] border-b-[1px] border-b-neutral-300 text-neutral-900 font-pts text-left">
               {dil === "RU" ? "Категория" : "Category"}
@@ -545,9 +623,7 @@ const Products = (props) => {
                 >
                   {itemWidth?.name}
                 </span>
-              </div>
-
-              
+              </div> 
             </div>})}
           </div>
 
@@ -576,7 +652,6 @@ const Products = (props) => {
                   {itemLength?.name}
                 </span>
               </div>
-
             </div>})}
           </div>
 
@@ -721,6 +796,7 @@ const Products = (props) => {
               />
             </div>
           </div>
+          
         </div>
       </div>
 
