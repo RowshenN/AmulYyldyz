@@ -19,11 +19,12 @@ import img1 from "../../images/home-img1.png";
 import Slider from "react-slick";
 import { Carousel } from "antd";
 import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
+import Section6 from "./Section6/Section6";
 const Homepage = (props) => {
   const { dil } = useContext(Context);
   const slider = useRef(null);
   const [banners, setBanners] = useState([]);
-  AOS.init({ duration: 700, delay: 150 });
+  AOS.init({ duration: 700, delay: 150});
 
   useEffect(() => {
     getBanner();
@@ -110,6 +111,7 @@ const Homepage = (props) => {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Section6 />
       <ContactForm />
       <Footer />
     </div>

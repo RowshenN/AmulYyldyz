@@ -9,7 +9,6 @@ const Section3 = () => {
   const {dil} = useContext(Context)
   const navigate = useNavigate();
   return (
-    <div>
       <div className="section3Conatiner">
         <div className="section3div">
          <div className="section3TextDiv">
@@ -23,12 +22,11 @@ const Section3 = () => {
             <button className="section3button" data-aos="zoom-out" onClick={() => navigate("/products")}><span className="section3butontext">{dil === "RU" ? "Перейти к простыням" : "Go to bedsheets"}</span></button>
           </div>
 
-          <div className="section3ImgDiv" data-aos="zoom-out">
+          <div className="section3ImgDiv" data-aos="fade-left">
             <img src={img} alt="img" className='section3Img' />
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
