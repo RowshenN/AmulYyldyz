@@ -8,6 +8,7 @@ import Footer from '../../components/footer/Footer'
 import Part1 from './part1/Part1'
 import Part2 from './part2/Part2'
 import Part3 from './part3/Part3'
+import Part4 from './part4/Part4'
 AOS.init({duration: 700, delay: 150})
 const About = () => {
   return ( 
@@ -17,6 +18,7 @@ const About = () => {
       <Part1 />
       <Part2 />
       <Part3 />
+      <Part4 />
 
       <Footer />
     </div>
