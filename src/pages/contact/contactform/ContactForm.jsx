@@ -10,6 +10,12 @@ import { axiosInstance } from "../../../utils/axiosIntance";
 const ContactForm = (props) => {
   const { dil } = useContext(Context);
   const [config, setConfig] = useState([]);
+  const [data, setData] = useState({
+    fullname: "",
+    phone: "",
+    text: "",
+    email: "",
+  });
   useEffect(() => {
     getConfig();
   }, []);
@@ -19,6 +25,22 @@ const ContactForm = (props) => {
       .then((res) => {
         console.log(res.data);
         setConfig(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const sendMessage = () => {
+    axiosInstance
+      .post("/api/contact/send", data)
+      .then((data) => {
+        console.log(data.data);
+        setData({
+          fullname: "",
+          phone: "",
+          text: "",
+          email: "",
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -58,6 +80,8 @@ const ContactForm = (props) => {
       <div className="contactForm">
         <div className="contactformDIv" data-aos="zoom-in-down">
           <input
+            value={data.fullname}
+            onChange={(e) => setData({ ...data, fullname: e.target.value })}
             type="text"
             placeholder={dil === "RU" ? "Полное имя" : "Full name"}
             className="contactInput"
@@ -65,12 +89,16 @@ const ContactForm = (props) => {
           />
           <input
             type="text"
+            value={data.phone}
+            onChange={(e) => setData({ ...data, phone: e.target.value })}
             placeholder={dil === "RU" ? "Номер телефона" : "Phone number"}
             className="contactInput"
             data-aos="fade-up"
           />
           <input
             type="email"
+            value={data.email}
+            onChange={(e) => setData({ ...data, email: e.target.value })}
             placeholder={
               dil === "RU" ? "Адрес электронной почты" : "Email address"
             }
@@ -79,11 +107,17 @@ const ContactForm = (props) => {
           />
           <textarea
             type="text"
+            value={data.text}
+            onChange={(e) => setData({ ...data, text: e.target.value })}
             placeholder={dil === "RU" ? "Ваше сообщение" : "Your message"}
             className="contactMessage"
             data-aos="zoom-out-down"
           />
-          <button className="ContactButton" data-aos="fade-down">
+          <button
+            onClick={() => sendMessage()}
+            className="ContactButton"
+            data-aos="fade-down"
+          >
             <span className="contactbutonText">
               {dil === "RU" ? "Отправить сообщение" : "Send Message"}
             </span>
