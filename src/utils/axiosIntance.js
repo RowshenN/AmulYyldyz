@@ -3,7 +3,7 @@ import { token } from "./token";
 
 // const BASE_URL = "http://localhost:8181/";
 // const BASE_URL = "http://116.203.238.7:8181/";
-const BASE_URL = "https://tm-textile.org:8181/";
+const BASE_URL = "https://www.tm-textile.org/";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
