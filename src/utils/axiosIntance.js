@@ -2,9 +2,9 @@ import axios from "axios";
 import { token } from "./token";
 
 // const BASE_URL = "http://localhost:8181/";
-// const BASE_URL = "http://116.203.238.7:8181/";
+const BASE_URL2 = "https://www.tm-textile.org/api/";
 const BASE_URL = "https://www.tm-textile.org/";
-const BASE_URL2 = "http://116.203.238.7:8181/";
+// const BASE_URL2 = "http://116.203.238.7:8181/";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
