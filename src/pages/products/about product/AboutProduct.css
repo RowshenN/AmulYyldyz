@@ -1,171 +1,171 @@
 .aboutproductContainer {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .aboutproductDiv {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 64px;
-} 
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
 
 @media only screen and (max-width: 62.5em) {
-    .aboutproductDiv {
-        flex-direction: column;
-    }
+  .aboutproductDiv {
+    flex-direction: column;
+  }
 }
 
 .aboutImagesDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 45%;
 }
 
 @media only screen and (max-width: 62.5em) {
-    .aboutImagesDiv {
-        width: 100%;
-    }
+  .aboutImagesDiv {
+    width: 100%;
+  }
 }
 
 .bigImg {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 
 .smallImageDiv {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .smallimg {
-    width: 22%;
-    object-fit: contain;
+  width: 22%;
+  cursor: pointer;
+  object-fit: cover;
 }
 
 .aboutInformationDiv {
-    width: 53%;
-    margin-top: 0;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+  width: 53%;
+  margin-top: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 62.5em) {
-    .aboutInformationDiv {
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-    }
+  .aboutInformationDiv {
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
 }
 
 .aboutHeader {
-    color: #161616;
-    font-size: 28px;
-    font-weight: 400;
-    font-family: "pts";
-    line-height: 36px;
-    padding-bottom: 30px;
-    margin: 0px;
+  color: #161616;
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "pts";
+  line-height: 36px;
+  padding-bottom: 30px;
+  margin: 0px;
 }
 
 @media only screen and (max-width: 45.625em) {
-    .aboutHeader {
-        font-size: 24px;
-    }
+  .aboutHeader {
+    font-size: 24px;
+  }
 }
 
 @media only screen and (max-width: 31.25em) {
-    .aboutHeader {
-        font-size: 18px;
-        font-family: "neue-medium";
-    }
+  .aboutHeader {
+    font-size: 18px;
+    font-family: "neue-medium";
+  }
 }
 
 .infoDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding-bottom: 24px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 .infodiv1 {
-    flex-wrap: wrap;
-    display: flex;
-    gap: 16px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 16px;
 }
 
 @media only screen and (max-width: 62.5em) {
-    .aboutHeader {
-        padding-top: 20px;
-    }
+  .aboutHeader {
+    padding-top: 20px;
+  }
 
-    .infodiv1 {
-        align-items: center;
-        justify-content: center;
-    }
+  .infodiv1 {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .infoTextDiv {
-    padding-bottom: 35px;
+  padding-bottom: 35px;
 }
 
 .infoText {
-    font-family: "neue-light";
-    font-size: 18px;
-    
+  font-family: "neue-light";
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 90.625em) {
-    .aboutHeader {
-        padding-bottom: 15px;
-    }
+  .aboutHeader {
+    padding-bottom: 15px;
+  }
 
-    .infoDiv {
-        padding-bottom: 5px;
-    }
+  .infoDiv {
+    padding-bottom: 5px;
+  }
 
-    .infoTextDiv {
-        padding-bottom: 5px;
-    }
+  .infoTextDiv {
+    padding-bottom: 5px;
+  }
 }
 
 .infoButonDiv {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
 .heart-icon {
-    position: absolute;
-    top: 15px;
-    left: 10px;
-    z-index: 10;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  z-index: 10;
 }
 
 .infobuton {
-    width: fit-content;
-    height: 48px;
-    border-radius: 120px;
-    border: none;
-    background-color: #EBFAFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: fit-content;
+  height: 48px;
+  border-radius: 120px;
+  border: none;
+  background-color: #ebfaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .infobutonText {
-    font-size: 18px;
-    font-family: "neue-medium";
-    line-height: 18px;
-    padding-left: 40px;
-    padding-right: 20px;
-    color: #161616;
-    white-space: nowrap;
+  font-size: 18px;
+  font-family: "neue-medium";
+  line-height: 18px;
+  padding-left: 40px;
+  padding-right: 20px;
+  color: #161616;
+  white-space: nowrap;
 }

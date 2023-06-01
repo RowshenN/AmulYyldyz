@@ -18,13 +18,13 @@ import narrow2 from "../../images/right narrow.svg";
 import img1 from "../../images/home-img1.png";
 import Slider from "react-slick";
 import { Carousel } from "antd";
-import { BASE_URL, axiosInstance } from "../../utils/axiosIntance";
+import { BASE_URL, BASE_URL2, axiosInstance } from "../../utils/axiosIntance";
 import Section6 from "./Section6/Section6";
 const Homepage = (props) => {
   const { dil } = useContext(Context);
-  const slider = useRef(null);
+  const slider = useRef();
   const [banners, setBanners] = useState([]);
-  AOS.init({ duration: 700, delay: 150});
+  AOS.init({ duration: 700, delay: 150 });
 
   useEffect(() => {
     getBanner();
@@ -70,7 +70,7 @@ const Homepage = (props) => {
               <>
                 <img
                   key={1}
-                  src={BASE_URL + item?.img}
+                  src={BASE_URL2 + item?.img}
                   alt={"img" + i + 1}
                   className="lg:h-[400px] 2xl:h-[450px] w-full object-cover"
                 />
@@ -90,7 +90,9 @@ const Homepage = (props) => {
           })}
         </Carousel>
         <div
-          onClick={() => slider.current.prev()}
+          onClick={() => {
+            slider.current.prev();
+          }}
           className="narrow1Div"
           // data-aos="fade-up"
           // data-aos-ease="ease"
@@ -98,7 +100,9 @@ const Homepage = (props) => {
           <img src={narrow} alt="narrow" className="narrow" />
         </div>
         <div
-          onClick={() => slider.current.next()}
+          onClick={() => {
+            slider.current.next();
+          }}
           className="narrow2Div"
           //  data-aos="fade-down" data-aos-delay="200"
         >

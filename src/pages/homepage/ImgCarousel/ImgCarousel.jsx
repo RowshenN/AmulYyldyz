@@ -6,7 +6,11 @@ import img2 from "../../../images/carouselImg2.png";
 import img3 from "../../../images/carouselImg3.png";
 import Slider from "react-slick";
 import { Carousel } from "antd";
-import { BASE_URL, axiosInstance } from "../../../utils/axiosIntance";
+import {
+  BASE_URL,
+  BASE_URL2,
+  axiosInstance,
+} from "../../../utils/axiosIntance";
 
 const ImgCarousel = () => {
   const [carousels, setCarousels] = useState([
@@ -33,6 +37,8 @@ const ImgCarousel = () => {
             .concat(res.data)
             .concat(res.data);
           setCarousels(array);
+        } else {
+          setCarousels(res.data);
         }
       })
       .catch((err) => {
@@ -105,15 +111,18 @@ const ImgCarousel = () => {
   return (
     <div>
       <div className="w-full mb-6  md1:mb-16">
-        <div className="lg:h-[350px] 2xl:h-[400px]">
+        <div className="!lg:h-[350px] !2xl:h-[400px]">
           <Carousel className=" w-full" {...props}>
             {carousels?.map((item, i) => {
               console.log(BASE_URL + item.img);
               return (
-                <div key={"car" + i} className="px-4">
+                <div
+                  className="lg:!h-[300px] px-4 2xl:!h-[350px] "
+                  key={"car" + i}
+                >
                   <img
-                    src={BASE_URL + item.img}
-                    className="lg:h-[300px] 2xl:h-[350px] object-contain"
+                    src={BASE_URL2 + item.img}
+                    className="lg:!h-[300px] 2xl:!h-[350px] !object-cover"
                     key={i}
                     alt="img"
                   />

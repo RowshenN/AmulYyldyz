@@ -4,6 +4,7 @@ import { token } from "./token";
 // const BASE_URL = "http://localhost:8181/";
 // const BASE_URL = "http://116.203.238.7:8181/";
 const BASE_URL = "https://www.tm-textile.org/";
+const BASE_URL2 = "http://116.203.238.7:8181/";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
@@ -16,4 +17,4 @@ const axiosInstance = axios.create({
     // Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwibmFtZSI6IktlcmltIiwiaWF0IjoxNjE2NDUwNjU3fQ.v8iyHYmwNlKVhLUA7LzxybICB8zzbVjRyXeFZbV7IPw'
   },
 });
-export { BASE_URL, axiosInstance };
+export { BASE_URL, BASE_URL2, axiosInstance };
