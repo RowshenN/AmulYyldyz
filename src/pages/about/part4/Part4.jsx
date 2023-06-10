@@ -12,8 +12,8 @@ const Part4 = () => {
         <div className="part4TextDiv1">
           <p className="part3text" data-aos="fade-right">
             {dil === "RU"
-              ? "Побалуйте себя роскошными купальными халатами, изготовленными из мягчайшего хлопка высочайшего качества. Откройте для себя новый уровень релаксации и позвольте нашим халатам стать вашим убежищем комфорта. Откройте для себя идеальное сочетание роскоши, стиля и долговечности и превратите ежедневное купание в омолаживающее приключение."
-              : "Indulge in the opulence bathrobes, made from the softest, highest quality cotton. Embrace a new level of relaxation and let our bathrobes become your sanctuary of comfort. Discover the perfect blend of luxury, style, and durability, and transform your everyday bathing routine into a rejuvenating experience. "}
+              ? "«Амуль Йылдызы» — экспортер текстильной продукции, базирующаяся в Ашхабаде, Туркменистан. Мы специализируемся на экспорте высококачественных текстильных изделий, которые производятся в Туркменистане. "
+              : "Amul Yildyzy is a textile exporter based in Ashgabat, Turkmenistan. We specialize in the export of high quality textile products that are produced in Turkmenistan. "}
           </p>
           <img
             src={aboutImg}

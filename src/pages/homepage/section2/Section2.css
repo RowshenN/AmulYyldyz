@@ -1,139 +1,139 @@
 .section2Div {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .section2Container {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-bottom: 64px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-bottom: 64px;
 }
 
 .section2HeaderDiv {
-    display: flex;
-    align-items: center;
-    width: 70%;
-    justify-content: flex-end;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: flex-end;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 56.25em) {
-    .section2HeaderDiv {
-        width: 100%;
-    }
+  .section2HeaderDiv {
+    width: 100%;
+  }
 }
 
 .section2HeaderText {
-    font-family: "pts";
-    font-size: 42px;
-    font-weight: 400;
-    color: #161616;
+  font-family: "pts";
+  font-size: 42px;
+  font-weight: 400;
+  color: #161616;
 }
 
 @media only screen and (max-width: 64.375em) {
-    .section2HeaderText {
-        font-size: 35px;
-    }
+  .section2HeaderText {
+    font-size: 35px;
+  }
 }
 
 @media only screen and (max-width: 55.625em) {
-    .section2HeaderText {
-        font-size: 28px;
-    }
+  .section2HeaderText {
+    font-size: 28px;
+  }
 
-    .section2HeaderDiv {
-        justify-content: center;
-    }
+  .section2HeaderDiv {
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 45.625em) {
-    .section2HeaderText {
-        font-size: 24px;
-    }
+  .section2HeaderText {
+    font-size: 24px;
+  }
 }
 
 .section2TextContainer {
-    width: 70%;
-    display: flex;
-    align-items: baseline;
-    padding-left: 10px;
-    padding-right: 10px;
-    box-sizing: border-box;
+  width: 70%;
+  display: flex;
+  align-items: baseline;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
 }
 
 @media only screen and (max-width: 56.25em) {
-    .section2TextContainer {
-        justify-content: flex-start;
-        flex-direction: column;
-        align-items: baseline;
-        width: 100%;
-    }
+  .section2TextContainer {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: baseline;
+    width: 100%;
+  }
 }
 
 .textDiv1 {
-    padding-right: 25px;
-    height: fit-content;
-    width: 264px;
-    border-right: 1px solid #DDD7D2;
+  padding-right: 25px;
+  height: fit-content;
+  width: 304px;
+  border-right: 1px solid #ddd7d2;
 }
 
 .textDiv2 {
-    padding-right: 25px;
-    padding-left: 25px;
-    height: fit-content;
-    width: 264px;
-    border-right: 1px solid #DDD7D2;
+  padding-right: 25px;
+  padding-left: 25px;
+  height: fit-content;
+  width: 264px;
+  border-right: 1px solid #ddd7d2;
 }
 
 @media only screen and (max-width: 56.25em) {
-    .textDiv1, .textDiv2 {
-        border-right: none;
-        border-bottom: 1px solid #DDD7D2;
-        padding: 0px 0px 25px 0px;
-        width: 100%;
-    }
+  .textDiv1,
+  .textDiv2 {
+    border-right: none;
+    border-bottom: 1px solid #ddd7d2;
+    padding: 0px 0px 25px 0px;
+    width: 100%;
+  }
 
-    .textDiv2 {
-        padding-top: 25px;
-    }
-
+  .textDiv2 {
+    padding-top: 25px;
+  }
 }
 
- .textDiv3 {
-    height: fit-content;
-    padding-left: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /* height: 141px; */
-    width: 264px;
+.textDiv3 {
+  height: fit-content;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* height: 141px; */
+  width: 264px;
 }
 
 @media only screen and (max-width: 56.25em) {
-    .textDiv3 {
-        padding-left: 0px !important;
-        width: 100%;
-    }
+  .textDiv3 {
+    padding-left: 0px !important;
+    width: 100%;
+  }
 }
 
-
-.section2H2, .section2H3{
-    font-size: 18px;
-    font-weight: 500;
-    font-family: "neue-medium";
-    margin-top: 0px;
-    color: #161616;
+.section2H2,
+.section2H3 {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "neue-medium";
+  margin-top: 0px;
+  color: #161616;
 }
 
 .section2P {
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 27px;
-    font-family: "neue-light";
-    margin-bottom: 0px;
-    color: #161616;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  font-family: "neue-light";
+  margin-bottom: 0px;
+  color: #161616;
 }

@@ -8,7 +8,7 @@ const BASE_URL = "https://www.tm-textile.org/";
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
-  timeout: 10000,
+  timeout: 10000000,
 
   headers: {
     //  Authorization: 'Bearer ' + token(),

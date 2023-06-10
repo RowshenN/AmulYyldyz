@@ -47,8 +47,8 @@ const Homepage = (props) => {
         <div className="homeHeader">
           <h1 className="homeHeaderText">
             {dil === "RU"
-              ? "Поднимите свой повседневный уровень на новый уровень с нашими естественными элегантными полотенцами и простынями"
-              : "Elevate Your Everyday with Our Naturally Elegant Towels and Bedsheets"}
+              ? "Поднимите свой повседневный комфорт на новый уровень с нашими качественными полотенцами и постельным бельем из 100% хлопка."
+              : "Take your everyday comfort to the next level with our quality 100% cotton towels and linens."}
           </h1>
         </div>
       </div>

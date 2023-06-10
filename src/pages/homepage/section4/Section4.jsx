@@ -39,9 +39,7 @@ const Section4 = () => {
           </div>
 
           <div className="section4text2" data-aos="zoom-out">
-            <h1 className="section4H1">
-              +10 {dil === "RU" ? "годы" : "years"}
-            </h1>
+            <h1 className="section4H1">+5 {dil === "RU" ? "годы" : "years"}</h1>
             <p className="section4p">
               {dil === "RU" ? "Опыт работы в сфере" : "Experience in field"}
             </p>
