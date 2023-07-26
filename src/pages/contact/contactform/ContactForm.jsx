@@ -32,7 +32,7 @@ const ContactForm = (props) => {
   };
   const sendMessage = () => {
     axiosInstance
-      .post("/api/contact/send", data)
+      .post("/api/recive/mail", data)
       .then((data) => {
         console.log(data.data);
         setData({
